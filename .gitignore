@@ -14,3 +14,6 @@ dist/
 *~
 .cache/
 .turbo/
+.env.local
+.env
+.env.*.local
