@@ -112,7 +112,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="relative">
+      <body className="relative overflow-x-hidden">
         <ThemeProvider>
           <Navbar />
           <main>{children}</main>

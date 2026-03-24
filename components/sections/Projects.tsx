@@ -15,6 +15,7 @@ const Projects = () => {
         'Amazon collaboration',
       ],
       link: 'https://www.sunnxt.com',
+      image: '/sunnxt-showcase.svg',
       videoUrl: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ', // Replace with actual video
       featured: true,
     },
@@ -28,6 +29,7 @@ const Projects = () => {
         'Scalable architecture',
       ],
       link: 'https://simpleoms.in',
+      image: '/orderflow-showcase.svg',
       videoUrl: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
     },
     {

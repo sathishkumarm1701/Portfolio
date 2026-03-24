@@ -45,18 +45,19 @@ const Navbar = () => {
 
   return (
     <motion.nav
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
           ? theme === 'dark' 
             ? 'glass' 
             : 'glass'
           : 'bg-transparent'
       }`}
+      style={{ overflow: 'hidden' }}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className={`text-2xl font-bold ${theme === 'dark' ? 'gradient-text' : 'gradient-text'}`}>

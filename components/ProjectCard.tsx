@@ -13,6 +13,7 @@ interface ProjectCardProps {
   link?: string;
   github?: string;
   videoUrl?: string;
+  image?: string;
   featured?: boolean;
 }
 
@@ -24,6 +25,7 @@ const ProjectCard = ({
   link,
   github,
   videoUrl,
+  image,
   featured,
 }: ProjectCardProps) => {
   const [showVideo, setShowVideo] = useState(false);
@@ -36,22 +38,31 @@ const ProjectCard = ({
         }`}
         whileHover={{ y: -5 }}
       >
-        {/* Video Preview or Placeholder */}
-        {videoUrl && (
+        {/* Image or Video Preview */}
+        {image || videoUrl ? (
           <div className="relative h-48 bg-gradient-to-br from-blue-500/20 to-purple-500/20 overflow-hidden">
-            <div className="absolute inset-0 flex items-center justify-center">
-              <motion.button
-                onClick={() => setShowVideo(true)}
-                className="p-4 bg-blue-600 rounded-full hover:bg-blue-700 transition-colors"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <FiPlay size={24} className="text-white" />
-              </motion.button>
-            </div>
+            {image && (
+              <img 
+                src={image} 
+                alt={title}
+                className="w-full h-full object-cover"
+              />
+            )}
+            {videoUrl && (
+              <div className="absolute inset-0 flex items-center justify-center">
+                <motion.button
+                  onClick={() => setShowVideo(true)}
+                  className="p-4 bg-blue-600 rounded-full hover:bg-blue-700 transition-colors"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <FiPlay size={24} className="text-white" />
+                </motion.button>
+              </div>
+            )}
             <div className="absolute inset-0 bg-black/20" />
           </div>
-        )}
+        ) : null}
 
         {/* Project Header */}
         <div className="p-6 sm:p-8">
