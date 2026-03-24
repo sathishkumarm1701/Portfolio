@@ -10,11 +10,11 @@ export const metadata: Metadata = {
   keywords: ['React Native', 'OTT', 'Fire TV', 'Developer', 'Portfolio', 'Streaming', 'Mobile Development', 'Chennai', 'React Native Developer Chennai'],
   authors: [{ name: 'Sathish Kumar M' }],
   creator: 'Sathish Kumar M',
-  metadataBase: new URL('https://sathishkumar.dev'),
+  metadataBase: new URL('https://sathishm.online'),
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://sathishkumar.dev',
+    url: 'https://sathishm.online',
     title: 'Sathish Kumar M — React Native Developer',
     description: 'React Native & Fire TV specialist. Built streaming apps for 1M+ users at Sun TV Network. Based in Chennai.',
     siteName: 'Sathish Kumar M Portfolio',
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: 'https://sathishkumar.dev',
+    canonical: 'https://sathishm.online',
   },
 };
 
@@ -61,7 +61,7 @@ export default function RootLayout({
     '@type': 'Person',
     name: 'Sathish Kumar M',
     jobTitle: 'React Native Developer',
-    url: 'https://sathishkumar.dev',
+    url: 'https://sathishm.online',
     email: 'sathishm1701@gmail.com',
     telephone: '+91 9025439966',
     address: {
@@ -96,7 +96,7 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-        <link rel="canonical" href="https://sathishkumar.dev" />
+        <link rel="canonical" href="https://sathishm.online" />
         
         {/* Google Analytics */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-VR1HFN2ZBV"></script>
