@@ -51,15 +51,15 @@ const About = () => {
             {/* Text Content */}
             <motion.div variants={itemVariants} className="space-y-6">
               <p className="text-lg text-slate-300 leading-relaxed">
-                I'm a passionate React Native developer with 3+ years of experience building high-performance streaming applications. My expertise spans OTT platforms, Amazon Fire TV optimization, and performance engineering.
+                I'm a passionate React Native developer based in Chennai, India, with 3+ years of experience building high-performance streaming applications. My expertise spans OTT platforms, Amazon Fire TV optimization, and performance engineering.
               </p>
 
               <p className="text-lg text-slate-300 leading-relaxed">
-                I've had the privilege of collaborating with Amazon engineers to optimize streaming experiences for millions of users. My focus is on creating seamless, performant applications that scale effortlessly.
+                I've had the privilege of collaborating with Amazon engineers to optimize streaming experiences for millions of users across India and beyond. My focus is on creating seamless, performant applications that scale effortlessly.
               </p>
 
               <p className="text-lg text-slate-300 leading-relaxed">
-                When I'm not coding, I'm exploring new technologies, contributing to open-source projects, and sharing knowledge with the developer community.
+                When I'm not coding, I'm exploring new technologies, contributing to open-source projects, and sharing knowledge with the developer community in Chennai and across India.
               </p>
 
               {/* Highlights */}

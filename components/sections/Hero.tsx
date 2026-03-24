@@ -82,7 +82,7 @@ const Hero = () => {
         {/* Premium Tagline */}
         <motion.div variants={itemVariants} className="mb-12 max-w-3xl mx-auto">
           <p className="text-lg sm:text-xl text-slate-300 leading-relaxed font-light">
-            I don't just build apps. I craft <span className="text-purple-400 font-semibold">high-performance streaming experiences</span> that serve <span className="text-purple-400 font-semibold">millions of users</span>. 
+            Chennai-based React Native developer crafting <span className="text-purple-400 font-semibold">high-performance streaming experiences</span> that serve <span className="text-purple-400 font-semibold">millions of users</span> worldwide. 
             <br />
             <span className="text-slate-400 text-base mt-4 block">Proven track record: 30% performance improvements, 40% seek optimization, Amazon collaboration.</span>
           </p>
