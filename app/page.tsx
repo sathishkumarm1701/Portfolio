@@ -9,6 +9,7 @@ import Timeline from '@/components/sections/Timeline';
 import Projects from '@/components/sections/Projects';
 import DeviceShowcaseSection from '@/components/sections/DeviceShowcaseSection';
 import Achievements from '@/components/sections/Achievements';
+import Certifications from '@/components/sections/Certifications';
 import Contact from '@/components/sections/Contact';
 import ParticleBackground from '@/components/ParticleBackground';
 
@@ -26,6 +27,7 @@ export default function Home() {
         <DeviceShowcaseSection />
         <Projects />
         <Achievements />
+        <Certifications />
         <Contact />
       </div>
     </>
