@@ -5,9 +5,22 @@ import Footer from '@/components/Footer';
 import { ThemeProvider } from '@/context/ThemeContext';
 
 export const metadata: Metadata = {
-  title: 'Sathish Kumar M — React Native Developer | OTT & Fire TV Specialist',
-  description: 'Sathish Kumar M — React Native developer with 3+ years building OTT and Fire TV streaming apps. Based in Chennai. Improved SunNXT performance by 30% serving 1M+ users.',
-  keywords: ['React Native', 'OTT', 'Fire TV', 'Developer', 'Portfolio', 'Streaming', 'Mobile Development', 'Chennai', 'React Native Developer Chennai'],
+  title: 'Sathish Kumar M — React Native & Fire TV Developer | OTT Specialist',
+  description: 'React Native developer specializing in Fire TV apps, WebView integration, and ad SDK implementation. 3+ years building high-performance OTT platforms. SunNXT: 30% performance improvement, 500K+ Fire TV users.',
+  keywords: [
+    'React Native Developer',
+    'Fire TV Developer',
+    'OTT Platform Developer',
+    'WebView Integration',
+    'Ad SDK Implementation',
+    'React Native Chennai',
+    'Fire TV Optimization',
+    'Streaming App Developer',
+    'React Native Performance',
+    'Mobile App Developer',
+    'React Native Freelancer',
+    'Fire TV Specialist',
+  ],
   authors: [{ name: 'Sathish Kumar M' }],
   creator: 'Sathish Kumar M',
   metadataBase: new URL('https://sathishm.online'),
@@ -15,23 +28,23 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://sathishm.online',
-    title: 'Sathish Kumar M — React Native Developer',
-    description: 'React Native & Fire TV specialist. Built streaming apps for 1M+ users at Sun TV Network. Based in Chennai.',
+    title: 'Sathish Kumar M — React Native & Fire TV Developer',
+    description: 'Specialized in Fire TV apps, WebView integration, and ad SDK implementation. 3+ years experience, 30% performance improvement, 1M+ users reached.',
     siteName: 'Sathish Kumar M Portfolio',
     images: [
       {
         url: '/og-image.svg',
         width: 1200,
         height: 630,
-        alt: 'Sathish Kumar M - React Native Developer Portfolio',
+        alt: 'Sathish Kumar M - React Native & Fire TV Developer Portfolio',
         type: 'image/svg+xml',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Sathish Kumar M — React Native Developer',
-    description: 'React Native & Fire TV specialist. 3+ years experience, 30% performance improvement, 1M+ users reached.',
+    title: 'Sathish Kumar M — React Native & Fire TV Developer',
+    description: 'Fire TV specialist. 3+ years, 30% performance improvement, 1M+ users, WebView & ad SDK expert.',
     images: ['/og-image.svg'],
     creator: '@sathishkumarm',
   },
@@ -49,6 +62,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://sathishm.online',
   },
+  verification: {
+    google: 'YOUR_GOOGLE_VERIFICATION_CODE', // Add after Google Search Console verification
+  },
 };
 
 export default function RootLayout({
@@ -64,6 +80,8 @@ export default function RootLayout({
     url: 'https://sathishm.online',
     email: 'sathishm1701@gmail.com',
     telephone: '+91 9025439966',
+    image: 'https://sathishm.online/og-image.svg',
+    description: 'React Native developer specializing in Fire TV apps, WebView integration, and ad SDK implementation. 3+ years experience building high-performance OTT platforms.',
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'Chennai',
@@ -79,11 +97,19 @@ export default function RootLayout({
       'Redux Toolkit',
       'Amazon Fire TV',
       'Streaming Technology',
+      'WebView Integration',
+      'Ad SDK Implementation',
+      'Performance Optimization',
+      'Mobile Development',
     ],
     sameAs: [
       'https://www.linkedin.com/in/sathish-kumar-m-453464265/',
       'https://github.com/sathishkumarm1701',
     ],
+    workLocation: {
+      '@type': 'Place',
+      name: 'Chennai, Tamil Nadu, India',
+    },
   };
 
   return (
