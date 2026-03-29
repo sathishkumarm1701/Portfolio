@@ -1,6 +1,11 @@
 const requests: Map<string, number[]> = new Map();
 const CLEANUP_INTERVAL = 3600000; // 1 hour
 
+// Extend global type for cleanup tracking
+declare global {
+  var _rateLimitCleanupScheduled: boolean | undefined;
+}
+
 // Cleanup old entries periodically
 function cleanupOldEntries() {
   const now = Date.now();
@@ -16,9 +21,9 @@ function cleanupOldEntries() {
   }
 }
 
-// Schedule cleanup
-if (typeof global !== 'undefined' && !global._rateLimitCleanupScheduled) {
-  global._rateLimitCleanupScheduled = true;
+// Schedule cleanup (only once)
+if (typeof globalThis !== 'undefined' && !globalThis._rateLimitCleanupScheduled) {
+  globalThis._rateLimitCleanupScheduled = true;
   setInterval(cleanupOldEntries, CLEANUP_INTERVAL);
 }
 
