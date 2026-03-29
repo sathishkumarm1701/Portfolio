@@ -8,7 +8,9 @@ const Hero = () => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    setIsLoaded(true);
+    // Use requestAnimationFrame for better performance
+    const frame = requestAnimationFrame(() => setIsLoaded(true));
+    return () => cancelAnimationFrame(frame);
   }, []);
 
   const containerVariants = {
@@ -53,6 +55,7 @@ const Hero = () => {
           <motion.div
             className="px-6 py-3 rounded-full glass text-sm font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 border border-purple-500/30 backdrop-blur-md"
             whileHover={{ scale: 1.05, borderColor: 'rgba(139, 92, 246, 0.6)' }}
+            aria-label="Premium React Native Developer Badge"
           >
             ✨ Premium React Native Developer
           </motion.div>
@@ -62,13 +65,9 @@ const Hero = () => {
         <motion.div variants={itemVariants} className="mb-6">
           <h1 className="text-6xl sm:text-7xl lg:text-8xl font-black mb-4 leading-tight">
             <span className="block mb-2">
-              <motion.span
-                className="inline-block bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"
-                animate={{ backgroundPosition: ['0%', '100%', '0%'] }}
-                transition={{ duration: 8, repeat: Infinity }}
-              >
+              <span className="inline-block bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                 Sathish Kumar M
-              </motion.span>
+              </span>
             </span>
           </h1>
           <motion.p

@@ -84,6 +84,7 @@ const Navbar = () => {
             {/* Theme Toggle */}
             <motion.button
               onClick={toggleTheme}
+              aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
               className={`p-2 rounded-lg transition-colors ${
                 theme === 'dark'
                   ? 'bg-slate-800 text-yellow-400 hover:bg-slate-700'
@@ -113,6 +114,7 @@ const Navbar = () => {
           <div className="md:hidden flex items-center gap-4">
             <motion.button
               onClick={toggleTheme}
+              aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
               className={`p-2 rounded-lg transition-colors ${
                 theme === 'dark'
                   ? 'bg-slate-800 text-yellow-400 hover:bg-slate-700'
@@ -125,6 +127,7 @@ const Navbar = () => {
             </motion.button>
 
             <button
+              aria-label={isOpen ? 'Close navigation menu' : 'Open navigation menu'}
               className={`${theme === 'dark' ? 'text-white' : 'text-slate-200'}`}
               onClick={() => setIsOpen(!isOpen)}
             >

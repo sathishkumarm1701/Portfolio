@@ -82,6 +82,7 @@ const Footer = () => {
               href={link.href}
               target="_blank"
               rel="noopener noreferrer"
+              aria-label={link.label}
               className="text-slate-300 hover:text-blue-400 transition-colors"
               whileHover={{ scale: 1.2, rotate: 5 }}
               whileTap={{ scale: 0.9 }}

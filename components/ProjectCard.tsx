@@ -52,6 +52,7 @@ const ProjectCard = ({
               <div className="absolute inset-0 flex items-center justify-center">
                 <motion.button
                   onClick={() => setShowVideo(true)}
+                  aria-label={`Play video for ${title}`}
                   className="p-4 bg-blue-600 rounded-full hover:bg-blue-700 transition-colors"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
@@ -74,6 +75,7 @@ const ProjectCard = ({
                   href={link}
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label={`Visit ${title} project`}
                   className="p-2 bg-blue-500/20 rounded-lg text-blue-400 hover:bg-blue-500/30 transition-colors"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
@@ -86,6 +88,7 @@ const ProjectCard = ({
                   href={github}
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label={`View ${title} on GitHub`}
                   className="p-2 bg-blue-500/20 rounded-lg text-blue-400 hover:bg-blue-500/30 transition-colors"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
@@ -154,6 +157,7 @@ const ProjectCard = ({
             >
               <button
                 onClick={() => setShowVideo(false)}
+                aria-label="Close video player"
                 className="absolute top-4 right-4 p-2 bg-red-600 rounded-lg hover:bg-red-700 transition-colors z-10"
               >
                 <FiX size={24} className="text-white" />

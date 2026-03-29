@@ -2,6 +2,12 @@
   "name": "sathish-portfolio",
   "version": "1.0.0",
   "description": "Modern developer portfolio with animations and backend integration",
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not op_mini all",
+    "last 2 versions"
+  ],
   "scripts": {
     "dev": "next dev",
     "build": "next build",
