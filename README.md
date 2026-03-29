@@ -254,6 +254,6 @@ For issues or questions, please open an issue on GitHub.
 
 Sathish Kumar M - React Native Developer | OTT & Fire TV Specialist
 
-- Website: [sathishkumar.dev](https://sathishkumar.dev)
+- Website: [sathishkumar.dev](https://sathishm.online)
 - LinkedIn: [linkedin.com/in/sathish-kumar-m](https://linkedin.com/in/sathish-kumar-m)
 - GitHub: [github.com/sathishkumar](https://github.com/sathishkumar)
