@@ -1,27 +1,11 @@
 'use client';
 
+import { memo } from 'react';
 import { motion } from 'framer-motion';
 import { FiDownload, FiMail, FiLinkedin } from 'react-icons/fi';
+import { containerVariants, itemVariants } from '@/lib/animations';
 
-const PremiumCTA = () => {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6 },
-    },
-  };
+const PremiumCTA = memo(() => {
 
   const actions = [
     {
@@ -96,6 +80,8 @@ const PremiumCTA = () => {
       </div>
     </section>
   );
-};
+});
+
+PremiumCTA.displayName = 'PremiumCTA';
 
 export default PremiumCTA;

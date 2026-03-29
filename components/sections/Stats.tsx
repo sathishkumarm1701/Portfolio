@@ -1,9 +1,11 @@
 'use client';
 
+import { memo } from 'react';
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
+import { containerVariants, itemVariants } from '@/lib/animations';
 
-const Stats = () => {
+const Stats = memo(() => {
   const [counts, setCounts] = useState({
     experience: 0,
     projects: 0,
@@ -65,25 +67,6 @@ const Stats = () => {
     },
   ];
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6 },
-    },
-  };
-
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
       <div className="max-w-6xl mx-auto">
@@ -119,6 +102,8 @@ const Stats = () => {
       </div>
     </section>
   );
-};
+});
+
+Stats.displayName = 'Stats';
 
 export default Stats;

@@ -1,9 +1,11 @@
 'use client';
 
+import { memo } from 'react';
 import { motion } from 'framer-motion';
 import { FiTrendingUp, FiUsers, FiAward, FiZap } from 'react-icons/fi';
+import { containerVariants, itemVariants } from '@/lib/animations';
 
-const Achievements = () => {
+const Achievements = memo(() => {
   const achievements = [
     {
       icon: FiTrendingUp,
@@ -26,25 +28,6 @@ const Achievements = () => {
       description: 'Worked directly with Amazon engineers to optimize streaming experiences for Fire TV ecosystem.',
     },
   ];
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.15,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6 },
-    },
-  };
 
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
@@ -91,6 +74,8 @@ const Achievements = () => {
       </div>
     </section>
   );
-};
+});
+
+Achievements.displayName = 'Achievements';
 
 export default Achievements;

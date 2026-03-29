@@ -17,10 +17,10 @@ export async function POST(request: NextRequest) {
     }
 
     const body = await request.json();
-    const { name, email, message } = body;
+    const { name, email, phone, subject, category, message } = body;
 
     // Validation
-    if (!name || !email || !message) {
+    if (!name || !email || !subject || !category || !message) {
       return NextResponse.json(
         { error: 'Missing required fields' },
         { status: 400 }
@@ -69,27 +69,33 @@ export async function POST(request: NextRequest) {
       id: savedId || `msg_${Date.now()}`,
       name,
       email,
+      phone,
+      subject,
+      category,
       message,
       timestamp: new Date().toISOString(),
       ipAddress: ip,
     };
     messages.push(messageData);
 
-    // Try to send emails if configured
+    // Send emails asynchronously in the background (don't wait for them)
     if (process.env.SMTP_USER && process.env.SMTP_PASS) {
-      try {
-        const { sendContactConfirmation, sendAdminNotification } = await import('@/lib/email');
-        await sendContactConfirmation(email, name);
-        await sendAdminNotification(name, email, message);
-        console.log('Emails sent successfully');
-      } catch (emailError) {
-        console.warn('Email sending skipped - not configured yet. See GMAIL_SETUP.md to enable.');
-        // Don't fail the request if email fails
-      }
-    } else {
-      console.log('Email notifications disabled - configure SMTP to enable');
+      // Fire and forget - don't await these
+      (async () => {
+        try {
+          const { sendContactConfirmation, sendAdminNotification } = await import('@/lib/email');
+          await Promise.all([
+            sendContactConfirmation(email, name),
+            sendAdminNotification(name, email, subject, category, phone, message),
+          ]);
+          console.log('Emails sent successfully');
+        } catch (emailError) {
+          console.warn('Email sending failed in background:', emailError);
+        }
+      })();
     }
 
+    // Return immediately without waiting for emails
     return NextResponse.json(
       {
         success: true,

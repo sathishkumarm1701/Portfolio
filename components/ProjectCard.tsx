@@ -1,9 +1,10 @@
 'use client';
 
-import { useState } from 'react';
+import { memo, useState, lazy, Suspense } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FiExternalLink, FiGithub, FiPlay, FiX } from 'react-icons/fi';
-import ReactPlayer from 'react-player';
+
+const ReactPlayer = lazy(() => import('react-player'));
 
 interface ProjectCardProps {
   title: string;
@@ -17,7 +18,7 @@ interface ProjectCardProps {
   featured?: boolean;
 }
 
-const ProjectCard = ({
+const ProjectCard = memo(({
   title,
   description,
   tech,
@@ -164,13 +165,15 @@ const ProjectCard = ({
               </button>
 
               <div className="aspect-video">
-                <ReactPlayer
-                  url={videoUrl}
-                  playing
-                  controls
-                  width="100%"
-                  height="100%"
-                />
+                <Suspense fallback={<div className="w-full h-full bg-slate-800 flex items-center justify-center">Loading player...</div>}>
+                  <ReactPlayer
+                    url={videoUrl}
+                    playing
+                    controls
+                    width="100%"
+                    height="100%"
+                  />
+                </Suspense>
               </div>
             </motion.div>
           </motion.div>
@@ -178,6 +181,8 @@ const ProjectCard = ({
       </AnimatePresence>
     </>
   );
-};
+});
+
+ProjectCard.displayName = 'ProjectCard';
 
 export default ProjectCard;

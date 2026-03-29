@@ -1,20 +1,26 @@
 'use client';
 
-import { useState } from 'react';
+import { memo, useState } from 'react';
 import { motion } from 'framer-motion';
 import { FiMail, FiPhone, FiMapPin } from 'react-icons/fi';
+import { containerVariants, itemVariants } from '@/lib/animations';
+import { contactFormSchema } from '@/lib/validation';
 
-const Contact = () => {
+const Contact = memo(() => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    phone: '',
+    subject: '',
+    category: '',
     message: '',
   });
   const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const [message, setMessage] = useState('');
+  const [errors, setErrors] = useState<Record<string, string>>({});
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
       ...prev,
@@ -26,6 +32,21 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true);
     setStatus('idle');
+    setErrors({});
+
+    // Validate form data with Zod
+    const validation = contactFormSchema.safeParse(formData);
+    
+    if (!validation.success) {
+      const fieldErrors: Record<string, string> = {};
+      validation.error.errors.forEach((error) => {
+        const path = error.path[0] as string;
+        fieldErrors[path] = error.message;
+      });
+      setErrors(fieldErrors);
+      setLoading(false);
+      return;
+    }
 
     try {
       const response = await fetch('/api/contact', {
@@ -33,7 +54,7 @@ const Contact = () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(validation.data),
       });
 
       const data = await response.json();
@@ -41,7 +62,7 @@ const Contact = () => {
       if (response.ok) {
         setStatus('success');
         setMessage('Message sent successfully! I\'ll get back to you soon.');
-        setFormData({ name: '', email: '', message: '' });
+        setFormData({ name: '', email: '', phone: '', subject: '', category: '', message: '' });
         // Clear success message after 5 seconds
         setTimeout(() => setStatus('idle'), 5000);
       } else {
@@ -55,25 +76,6 @@ const Contact = () => {
     } finally {
       setLoading(false);
     }
-  };
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6 },
-    },
   };
 
   const contactInfo = [
@@ -170,9 +172,12 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-dark-800 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 transition-colors"
+                    className={`w-full px-4 py-3 bg-dark-800 border rounded-lg text-white placeholder-slate-500 focus:outline-none transition-colors ${
+                      errors.name ? 'border-red-500 focus:border-red-500' : 'border-slate-700 focus:border-blue-500'
+                    }`}
                     placeholder="Your name"
                   />
+                  {errors.name && <p className="mt-1 text-sm text-red-400">{errors.name}</p>}
                 </div>
 
                 {/* Email */}
@@ -187,12 +192,78 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-dark-800 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 transition-colors"
+                    className={`w-full px-4 py-3 bg-dark-800 border rounded-lg text-white placeholder-slate-500 focus:outline-none transition-colors ${
+                      errors.email ? 'border-red-500 focus:border-red-500' : 'border-slate-700 focus:border-blue-500'
+                    }`}
                     placeholder="your@email.com"
                   />
+                  {errors.email && <p className="mt-1 text-sm text-red-400">{errors.email}</p>}
                 </div>
 
-                {/* Message */}
+                {/* Phone */}
+                <div>
+                  <label htmlFor="phone" className="block text-sm font-medium text-slate-300 mb-2">
+                    Phone (Optional)
+                  </label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    className={`w-full px-4 py-3 bg-dark-800 border rounded-lg text-white placeholder-slate-500 focus:outline-none transition-colors ${
+                      errors.phone ? 'border-red-500 focus:border-red-500' : 'border-slate-700 focus:border-blue-500'
+                    }`}
+                    placeholder="+91 9025439966"
+                  />
+                  {errors.phone && <p className="mt-1 text-sm text-red-400">{errors.phone}</p>}
+                </div>
+
+                {/* Subject */}
+                <div>
+                  <label htmlFor="subject" className="block text-sm font-medium text-slate-300 mb-2">
+                    Subject
+                  </label>
+                  <input
+                    type="text"
+                    id="subject"
+                    name="subject"
+                    value={formData.subject}
+                    onChange={handleChange}
+                    required
+                    className={`w-full px-4 py-3 bg-dark-800 border rounded-lg text-white placeholder-slate-500 focus:outline-none transition-colors ${
+                      errors.subject ? 'border-red-500 focus:border-red-500' : 'border-slate-700 focus:border-blue-500'
+                    }`}
+                    placeholder="What is this about?"
+                  />
+                  {errors.subject && <p className="mt-1 text-sm text-red-400">{errors.subject}</p>}
+                </div>
+
+                {/* Category */}
+                <div>
+                  <label htmlFor="category" className="block text-sm font-medium text-slate-300 mb-2">
+                    Category
+                  </label>
+                  <select
+                    id="category"
+                    name="category"
+                    value={formData.category}
+                    onChange={handleChange}
+                    required
+                    className={`w-full px-4 py-3 bg-dark-800 border rounded-lg text-white focus:outline-none transition-colors ${
+                      errors.category ? 'border-red-500 focus:border-red-500' : 'border-slate-700 focus:border-blue-500'
+                    }`}
+                  >
+                    <option value="">Select a category</option>
+                    <option value="project">Project Inquiry</option>
+                    <option value="job">Job Opportunity</option>
+                    <option value="collaboration">Collaboration</option>
+                    <option value="general">General Question</option>
+                    <option value="other">Other</option>
+                  </select>
+                  {errors.category && <p className="mt-1 text-sm text-red-400">{errors.category}</p>}
+                </div>
+
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-slate-300 mb-2">
                     Message
@@ -204,9 +275,15 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     rows={5}
-                    className="w-full px-4 py-3 bg-dark-800 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 transition-colors resize-none"
+                    className={`w-full px-4 py-3 bg-dark-800 border rounded-lg text-white placeholder-slate-500 focus:outline-none transition-colors resize-none ${
+                      errors.message ? 'border-red-500 focus:border-red-500' : 'border-slate-700 focus:border-blue-500'
+                    }`}
                     placeholder="Your message..."
                   />
+                  {errors.message && <p className="mt-1 text-sm text-red-400">{errors.message}</p>}
+                  <div className="mt-2 text-sm text-slate-400">
+                    {formData.message.length}/1000 characters
+                  </div>
                 </div>
 
                 {/* Status Message */}
@@ -241,6 +318,8 @@ const Contact = () => {
       </div>
     </section>
   );
-};
+});
+
+Contact.displayName = 'Contact';
 
 export default Contact;

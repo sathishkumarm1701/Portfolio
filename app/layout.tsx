@@ -1,9 +1,8 @@
 import type { Metadata } from 'next';
 import Script from 'next/script';
 import './globals.css';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
 import { ThemeProvider } from '@/context/ThemeContext';
+import { ClientLayout } from '@/components/ClientLayout';
 
 export const metadata: Metadata = {
   title: 'Sathish Kumar M — React Native & Fire TV Developer | OTT Specialist',
@@ -142,9 +141,9 @@ export default function RootLayout({
       </head>
       <body className="relative overflow-x-hidden">
         <ThemeProvider>
-          <Navbar />
-          <main>{children}</main>
-          <Footer />
+          <ClientLayout>
+            {children}
+          </ClientLayout>
         </ThemeProvider>
         
         {/* Google Analytics - Lazy loaded for performance */}

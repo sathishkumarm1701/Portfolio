@@ -1,4 +1,26 @@
 const requests: Map<string, number[]> = new Map();
+const CLEANUP_INTERVAL = 3600000; // 1 hour
+
+// Cleanup old entries periodically
+function cleanupOldEntries() {
+  const now = Date.now();
+  const maxAge = 24 * 60 * 60 * 1000; // 24 hours
+
+  for (const [ip, times] of requests.entries()) {
+    const recentTimes = times.filter((time) => now - time < maxAge);
+    if (recentTimes.length === 0) {
+      requests.delete(ip);
+    } else {
+      requests.set(ip, recentTimes);
+    }
+  }
+}
+
+// Schedule cleanup
+if (typeof global !== 'undefined' && !global._rateLimitCleanupScheduled) {
+  global._rateLimitCleanupScheduled = true;
+  setInterval(cleanupOldEntries, CLEANUP_INTERVAL);
+}
 
 export function rateLimit(ip: string, windowMs: number = 900000, maxRequests: number = 5): boolean {
   const now = Date.now();

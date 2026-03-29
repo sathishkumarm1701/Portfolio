@@ -1,9 +1,11 @@
 'use client';
 
+import { memo } from 'react';
 import { motion } from 'framer-motion';
 import { FiCode, FiTv, FiZap, FiDatabase } from 'react-icons/fi';
+import { containerVariants, itemVariants } from '@/lib/animations';
 
-const Skills = () => {
+const Skills = memo(() => {
   const skillCategories = [
     {
       title: 'Frontend',
@@ -27,24 +29,7 @@ const Skills = () => {
     },
   ];
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6 },
-    },
-  };
 
   return (
     <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8 relative">
@@ -103,6 +88,8 @@ const Skills = () => {
       </div>
     </section>
   );
-};
+});
+
+Skills.displayName = 'Skills';
 
 export default Skills;

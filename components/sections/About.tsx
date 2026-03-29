@@ -1,26 +1,10 @@
 'use client';
 
+import { memo } from 'react';
 import { motion } from 'framer-motion';
+import { containerVariants, itemVariants } from '@/lib/animations';
 
-const About = () => {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.8 },
-    },
-  };
+const About = memo(() => {
 
   const highlights = [
     { label: '3+', value: 'Years Experience' },
@@ -96,6 +80,8 @@ const About = () => {
       </div>
     </section>
   );
-};
+});
+
+About.displayName = 'About';
 
 export default About;

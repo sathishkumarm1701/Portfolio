@@ -1,10 +1,11 @@
 'use client';
 
+import { memo, useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { FiArrowRight, FiCode, FiZap, FiTarget } from 'react-icons/fi';
-import { useEffect, useState } from 'react';
+import { containerVariants, itemVariants } from '@/lib/animations';
 
-const Hero = () => {
+const Hero = memo(() => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
@@ -12,26 +13,6 @@ const Hero = () => {
     const frame = requestAnimationFrame(() => setIsLoaded(true));
     return () => cancelAnimationFrame(frame);
   }, []);
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.15,
-        delayChildren: 0.3,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.8, ease: 'easeOut' },
-    },
-  };
 
   const stats = [
     { icon: FiCode, label: '3+ Years', value: 'Experience' },
@@ -171,6 +152,8 @@ const Hero = () => {
       />
     </section>
   );
-};
+});
+
+Hero.displayName = 'Hero';
 
 export default Hero;

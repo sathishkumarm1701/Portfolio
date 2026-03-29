@@ -1,25 +1,43 @@
-import nodemailer from 'nodemailer';
+import nodemailer, { Transporter } from 'nodemailer';
 
-let transporter: any = null;
+let transporter: Transporter | null = null;
+let transporterPromise: Promise<Transporter | null> | null = null;
 
-function getTransporter() {
+async function getTransporter(): Promise<Transporter | null> {
+  // Return cached transporter if available
   if (transporter) return transporter;
+  
+  // If already creating, wait for it
+  if (transporterPromise) return transporterPromise;
 
   if (!process.env.SMTP_HOST || !process.env.SMTP_USER || !process.env.SMTP_PASS) {
     console.warn('Email configuration incomplete. Emails will not be sent.');
     return null;
   }
 
-  transporter = nodemailer.createTransport({
-    host: process.env.SMTP_HOST,
-    port: parseInt(process.env.SMTP_PORT || '587'),
-    secure: process.env.SMTP_PORT === '465',
-    auth: {
-      user: process.env.SMTP_USER,
-      pass: process.env.SMTP_PASS,
-    },
-  });
+  // Create transporter with connection pooling
+  transporterPromise = Promise.resolve(
+    nodemailer.createTransport({
+      host: process.env.SMTP_HOST,
+      port: parseInt(process.env.SMTP_PORT || '587'),
+      secure: process.env.SMTP_PORT === '465',
+      auth: {
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASS,
+      },
+      pool: {
+        maxConnections: 5,
+        maxMessages: 100,
+        rateDelta: 2000,
+        rateLimit: 5,
+      },
+      connectionTimeout: 5000,
+      socketTimeout: 5000,
+    } as any)
+  );
 
+  transporter = await transporterPromise;
+  transporterPromise = null;
   return transporter;
 }
 
@@ -28,7 +46,7 @@ export async function sendEmail(
   subject: string,
   html: string
 ): Promise<void> {
-  const transporter = getTransporter();
+  const transporter = await getTransporter();
   
   if (!transporter) {
     console.warn('Email service not configured. Skipping email send.');
@@ -53,7 +71,7 @@ export async function sendContactConfirmation(
   email: string,
   name: string
 ): Promise<void> {
-  const transporter = getTransporter();
+  const transporter = await getTransporter();
   
   if (!transporter) {
     console.warn('Email service not configured. Skipping confirmation email.');
@@ -84,9 +102,12 @@ export async function sendContactConfirmation(
 export async function sendAdminNotification(
   name: string,
   email: string,
+  subject: string,
+  category: string,
+  phone: string,
   message: string
 ): Promise<void> {
-  const transporter = getTransporter();
+  const transporter = await getTransporter();
   
   if (!transporter) {
     console.warn('Email service not configured. Skipping admin notification.');
@@ -98,6 +119,9 @@ export async function sendAdminNotification(
       <h2 style="color: #333;">New Contact Form Submission</h2>
       <p style="color: #666;"><strong>Name:</strong> ${name}</p>
       <p style="color: #666;"><strong>Email:</strong> ${email}</p>
+      ${phone ? `<p style="color: #666;"><strong>Phone:</strong> ${phone}</p>` : ''}
+      <p style="color: #666;"><strong>Subject:</strong> ${subject}</p>
+      <p style="color: #666;"><strong>Category:</strong> ${category}</p>
       <p style="color: #666;"><strong>Message:</strong></p>
       <div style="background: #f5f5f5; padding: 15px; border-radius: 5px; color: #333;">
         ${message.replace(/\n/g, '<br>')}
@@ -108,7 +132,7 @@ export async function sendAdminNotification(
   try {
     await sendEmail(
       process.env.SMTP_USER || '',
-      `New Contact: ${name}`,
+      `New Contact: ${subject} (${category})`,
       html
     );
   } catch (error) {

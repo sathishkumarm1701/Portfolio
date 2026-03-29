@@ -13,6 +13,7 @@ const Timeline = lazy(() => import('@/components/sections/Timeline'));
 const DeviceShowcaseSection = lazy(() => import('@/components/sections/DeviceShowcaseSection'));
 const Projects = lazy(() => import('@/components/sections/Projects'));
 const Achievements = lazy(() => import('@/components/sections/Achievements'));
+const Blog = lazy(() => import('@/components/sections/Blog'));
 const Certifications = lazy(() => import('@/components/sections/Certifications'));
 const Contact = lazy(() => import('@/components/sections/Contact'));
 
@@ -54,6 +55,10 @@ export default function Home() {
         
         <Suspense fallback={<SectionFallback />}>
           <Achievements />
+        </Suspense>
+        
+        <Suspense fallback={<SectionFallback />}>
+          <Blog />
         </Suspense>
         
         <Suspense fallback={<SectionFallback />}>

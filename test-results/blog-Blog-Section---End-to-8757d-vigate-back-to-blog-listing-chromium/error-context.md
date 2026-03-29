@@ -1,0 +1,688 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - alert [ref=e2]: Sathish Kumar M — React Native & Fire TV Developer | OTT Specialist
+  - navigation [ref=e3]:
+    - generic [ref=e5]:
+      - link "SK" [ref=e6] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e7]:
+        - link "About" [ref=e8] [cursor=pointer]:
+          - /url: "#about"
+        - link "Skills" [ref=e9] [cursor=pointer]:
+          - /url: "#skills"
+        - link "Experience" [ref=e10] [cursor=pointer]:
+          - /url: "#experience"
+        - link "Projects" [ref=e11] [cursor=pointer]:
+          - /url: "#projects"
+        - link "Blog" [ref=e12] [cursor=pointer]:
+          - /url: "#blog"
+        - link "Certifications" [ref=e13] [cursor=pointer]:
+          - /url: "#certifications"
+        - link "Contact" [ref=e14] [cursor=pointer]:
+          - /url: "#contact"
+        - button "Switch to light mode" [ref=e15] [cursor=pointer]:
+          - img [ref=e16]
+        - link "Get in Touch" [ref=e22] [cursor=pointer]:
+          - /url: "#contact"
+  - main [ref=e23]:
+    - generic [ref=e24]:
+      - generic [ref=e26]:
+        - generic "Premium React Native Developer Badge" [ref=e28]: ✨ Premium React Native Developer
+        - generic [ref=e29]:
+          - heading "Sathish Kumar M" [level=1] [ref=e30]:
+            - generic [ref=e32]: Sathish Kumar M
+          - paragraph [ref=e33]: React Native Developer | OTT & Fire TV Specialist
+        - paragraph [ref=e35]:
+          - text: Chennai-based React Native developer crafting high-performance streaming experiences that serve millions of users worldwide.
+          - generic [ref=e36]: "Proven track record: 30% performance improvements, 40% seek optimization, Amazon collaboration."
+        - generic [ref=e37]:
+          - generic [ref=e38]:
+            - img [ref=e39]
+            - generic [ref=e42]: 3+ Years
+            - generic [ref=e43]: Experience
+          - generic [ref=e44]:
+            - img [ref=e45]
+            - generic [ref=e47]: 30%
+            - generic [ref=e48]: Performance Boost
+          - generic [ref=e49]:
+            - img [ref=e50]
+            - generic [ref=e54]: 1M+
+            - generic [ref=e55]: Users Impacted
+        - generic [ref=e56]:
+          - link "View My Work" [ref=e57] [cursor=pointer]:
+            - /url: "#projects"
+            - generic [ref=e58]:
+              - text: View My Work
+              - img [ref=e59]
+          - link "Let's Connect" [ref=e61] [cursor=pointer]:
+            - /url: "#contact"
+        - generic [ref=e63]:
+          - generic [ref=e64]: Scroll to explore
+          - generic [ref=e65]: ↓
+      - generic [ref=e68]:
+        - generic [ref=e69]:
+          - heading "Ready to Work Together?" [level=2] [ref=e70]
+          - paragraph [ref=e71]: Let's discuss how I can help you build exceptional streaming experiences
+        - generic [ref=e72]:
+          - link "Download Resume PDF • 2 Pages Get Started →" [ref=e73] [cursor=pointer]:
+            - /url: /resume.pdf
+            - generic [ref=e75]:
+              - img [ref=e77]
+              - heading "Download Resume" [level=3] [ref=e80]
+              - paragraph [ref=e81]: PDF • 2 Pages
+              - generic [ref=e82]: Get Started →
+          - link "Email Me sathishm1701@gmail.com Get Started →" [ref=e83] [cursor=pointer]:
+            - /url: mailto:sathishm1701@gmail.com
+            - generic [ref=e85]:
+              - img [ref=e87]
+              - heading "Email Me" [level=3] [ref=e90]
+              - paragraph [ref=e91]: sathishm1701@gmail.com
+              - generic [ref=e92]: Get Started →
+          - link "LinkedIn Profile Connect with me Get Started →" [ref=e93] [cursor=pointer]:
+            - /url: https://www.linkedin.com/in/sathish-kumar-m-453464265/
+            - generic [ref=e95]:
+              - img [ref=e97]
+              - heading "LinkedIn Profile" [level=3] [ref=e101]
+              - paragraph [ref=e102]: Connect with me
+              - generic [ref=e103]: Get Started →
+      - generic [ref=e106]:
+        - generic [ref=e109]:
+          - generic [ref=e110]: 📅
+          - generic [ref=e111]: 3+
+          - paragraph [ref=e112]: Years Experience
+        - generic [ref=e115]:
+          - generic [ref=e116]: 🚀
+          - generic [ref=e117]: "4"
+          - paragraph [ref=e118]: Projects Delivered
+        - generic [ref=e121]:
+          - generic [ref=e122]: 👥
+          - generic [ref=e123]: 1M+
+          - paragraph [ref=e124]: Users Reached
+        - generic [ref=e127]:
+          - generic [ref=e128]: ⚡
+          - generic [ref=e129]: 40%
+          - paragraph [ref=e130]: Performance Boost
+      - generic [ref=e133]:
+        - heading "About Me" [level=2] [ref=e135]
+        - generic [ref=e137]:
+          - generic [ref=e138]:
+            - paragraph [ref=e139]: I'm a passionate React Native developer based in Chennai, India, with 3+ years of experience building high-performance streaming applications. My expertise spans OTT platforms, Amazon Fire TV optimization, and performance engineering.
+            - paragraph [ref=e140]: I've had the privilege of collaborating with Amazon engineers to optimize streaming experiences for millions of users across India and beyond. My focus is on creating seamless, performant applications that scale effortlessly.
+            - paragraph [ref=e141]: When I'm not coding, I'm exploring new technologies, contributing to open-source projects, and sharing knowledge with the developer community in Chennai and across India.
+            - generic [ref=e142]:
+              - generic [ref=e143]:
+                - generic [ref=e144]: 3+
+                - generic [ref=e145]: Years Experience
+              - generic [ref=e146]:
+                - generic [ref=e147]: 30%
+                - generic [ref=e148]: Performance Improvement
+              - generic [ref=e149]:
+                - generic [ref=e150]: 40%
+                - generic [ref=e151]: Seek Performance Boost
+              - generic [ref=e152]:
+                - generic [ref=e153]: 1M+
+                - generic [ref=e154]: Users Reached
+          - generic [ref=e158]:
+            - generic [ref=e159]: 🚀
+            - paragraph [ref=e160]: Building the Future
+            - paragraph [ref=e161]: of Streaming Technology
+      - generic [ref=e164]:
+        - heading "Skills & Expertise" [level=2] [ref=e166]
+        - generic [ref=e168]:
+          - generic [ref=e169]:
+            - generic [ref=e170]:
+              - img [ref=e172]
+              - heading "Frontend" [level=3] [ref=e175]
+            - list [ref=e176]:
+              - listitem [ref=e177]: React Native
+              - listitem [ref=e179]: React.js
+              - listitem [ref=e181]: TypeScript
+              - listitem [ref=e183]: Tailwind CSS
+              - listitem [ref=e185]: Next.js
+          - generic [ref=e187]:
+            - generic [ref=e188]:
+              - img [ref=e190]
+              - heading "Streaming & TV" [level=3] [ref=e193]
+            - list [ref=e194]:
+              - listitem [ref=e195]: Fire TV
+              - listitem [ref=e197]: Kepler SDK
+              - listitem [ref=e199]: Shaka Player
+              - listitem [ref=e201]: HLS/DASH
+              - listitem [ref=e203]: OTT Platforms
+              - listitem [ref=e205]: SpatialNavigation
+          - generic [ref=e207]:
+            - generic [ref=e208]:
+              - img [ref=e210]
+              - heading "State Management" [level=3] [ref=e214]
+            - list [ref=e215]:
+              - listitem [ref=e216]: Redux Toolkit
+              - listitem [ref=e218]: Redux Saga
+              - listitem [ref=e220]: Context API
+              - listitem [ref=e222]: Zustand
+          - generic [ref=e224]:
+            - generic [ref=e225]:
+              - img [ref=e227]
+              - heading "Performance" [level=3] [ref=e229]
+            - list [ref=e230]:
+              - listitem [ref=e231]: Code Splitting
+              - listitem [ref=e233]: Lazy Loading
+              - listitem [ref=e235]: Caching
+              - listitem [ref=e237]: Bundle Optimization
+              - listitem [ref=e239]: Memory Management
+      - generic [ref=e243]:
+        - heading "Career Journey" [level=2] [ref=e245]
+        - generic [ref=e247]:
+          - generic [ref=e250] [cursor=pointer]:
+            - generic [ref=e252]: "1"
+            - generic [ref=e253]:
+              - generic [ref=e254]:
+                - heading "Software Developer" [level=3] [ref=e255]
+                - generic [ref=e256]: 2024 - Present
+              - paragraph [ref=e257]: Sun TV Network
+              - paragraph [ref=e258]: Leading development of SunNXT streaming platform
+              - generic [ref=e260]:
+                - generic [ref=e261]:
+                  - generic [ref=e262]: ✓
+                  - generic [ref=e263]: 30% performance improvement
+                - generic [ref=e264]:
+                  - generic [ref=e265]: ✓
+                  - generic [ref=e266]: Fire TV optimization
+                - generic [ref=e267]:
+                  - generic [ref=e268]: ✓
+                  - generic [ref=e269]: Amazon collaboration
+          - generic [ref=e272] [cursor=pointer]:
+            - generic [ref=e274]: "2"
+            - generic [ref=e275]:
+              - generic [ref=e276]:
+                - heading "React.js Developer" [level=3] [ref=e277]
+                - generic [ref=e278]: 2022 - 2024
+              - paragraph [ref=e279]: SAG Corps Technologies
+              - paragraph [ref=e280]: Built scalable web and mobile applications
+              - generic [ref=e281]:
+                - generic [ref=e282]:
+                  - generic [ref=e283]: ✓
+                  - generic [ref=e284]: OrderFlow OMS development
+                - generic [ref=e285]:
+                  - generic [ref=e286]: ✓
+                  - generic [ref=e287]: Real-time tracking systems
+                - generic [ref=e288]:
+                  - generic [ref=e289]: ✓
+                  - generic [ref=e290]: Redux state management
+          - generic [ref=e293] [cursor=pointer]:
+            - generic [ref=e295]: "3"
+            - generic [ref=e296]:
+              - generic [ref=e297]:
+                - heading "Full Stack Developer" [level=3] [ref=e298]
+                - generic [ref=e299]: 2020 - 2021
+              - paragraph [ref=e300]: Freelance
+              - paragraph [ref=e301]: Developed various web and mobile applications
+              - generic [ref=e302]:
+                - generic [ref=e303]:
+                  - generic [ref=e304]: ✓
+                  - generic [ref=e305]: Jogado App development
+                - generic [ref=e306]:
+                  - generic [ref=e307]: ✓
+                  - generic [ref=e308]: Responsive web design
+                - generic [ref=e309]:
+                  - generic [ref=e310]: ✓
+                  - generic [ref=e311]: Backend API implementation
+      - generic [ref=e314]:
+        - generic [ref=e315]:
+          - heading "Multi-Platform Expertise" [level=2] [ref=e316]
+          - paragraph [ref=e318]: Specialized in building high-performance applications for Fire TV, mobile devices, and web platforms
+        - generic [ref=e319]:
+          - generic [ref=e320]:
+            - generic [ref=e322]:
+              - img [ref=e323]
+              - paragraph [ref=e326]: Fire TV Device
+            - heading "Fire TV Optimization" [level=3] [ref=e327]
+            - paragraph [ref=e328]: Expert in optimizing applications for Amazon Fire TV ecosystem with focus on performance and user experience.
+            - list [ref=e329]:
+              - listitem [ref=e330]: Kepler SDK Integration
+              - listitem [ref=e332]: Remote Control Optimization
+              - listitem [ref=e334]: Performance Tuning
+          - generic [ref=e336]:
+            - generic [ref=e338]:
+              - img [ref=e339]
+              - paragraph [ref=e341]: Mobile Device
+            - heading "Mobile Development" [level=3] [ref=e342]
+            - paragraph [ref=e343]: Building cross-platform mobile applications with React Native for iOS and Android with seamless performance.
+            - list [ref=e344]:
+              - listitem [ref=e345]: React Native Expertise
+              - listitem [ref=e347]: Native Module Integration
+              - listitem [ref=e349]: App Store Optimization
+      - generic [ref=e353]:
+        - heading "Featured Projects" [level=2] [ref=e355]
+        - generic [ref=e357]:
+          - generic [ref=e359]:
+            - generic [ref=e360]:
+              - img "SunNXT" [ref=e361]
+              - button "Play video for SunNXT" [ref=e363] [cursor=pointer]:
+                - img [ref=e364]
+            - generic [ref=e367]:
+              - generic [ref=e368]:
+                - heading "SunNXT" [level=3] [ref=e369]
+                - link "Visit SunNXT project" [ref=e371] [cursor=pointer]:
+                  - /url: https://www.sunnxt.com
+                  - img [ref=e372]
+              - paragraph [ref=e376]: Premium OTT streaming platform with millions of users. Optimized for Fire TV and mobile devices with advanced video streaming capabilities.
+              - generic [ref=e377]:
+                - paragraph [ref=e378]: Tech Stack
+                - generic [ref=e379]:
+                  - generic [ref=e380]: React Native
+                  - generic [ref=e381]: Fire TV
+                  - generic [ref=e382]: Redux Toolkit
+                  - generic [ref=e383]: Shaka Player
+                  - generic [ref=e384]: SpatialNavigation
+                  - generic [ref=e385]: Axios
+                  - generic [ref=e386]: WebView
+              - generic [ref=e387]:
+                - paragraph [ref=e388]: Key Achievements
+                - list [ref=e389]:
+                  - listitem [ref=e390]: 30% performance improvement
+                  - listitem [ref=e392]: 500K+ Fire TV users
+                  - listitem [ref=e394]: Amazon collaboration
+          - generic [ref=e397]:
+            - generic [ref=e398]:
+              - img "OrderFlow OMS" [ref=e399]
+              - button "Play video for OrderFlow OMS" [ref=e401] [cursor=pointer]:
+                - img [ref=e402]
+            - generic [ref=e405]:
+              - generic [ref=e406]:
+                - heading "OrderFlow OMS" [level=3] [ref=e407]
+                - link "Visit OrderFlow OMS project" [ref=e409] [cursor=pointer]:
+                  - /url: https://simpleoms.in
+                  - img [ref=e410]
+              - paragraph [ref=e414]: Order Management System with real-time updates and analytics dashboard. Built for scalability and performance.
+              - generic [ref=e415]:
+                - paragraph [ref=e416]: Tech Stack
+                - generic [ref=e417]:
+                  - generic [ref=e418]: React.js
+                  - generic [ref=e419]: Node.js
+                  - generic [ref=e420]: MongoDB
+                  - generic [ref=e421]: Socket.io
+              - generic [ref=e422]:
+                - paragraph [ref=e423]: Key Achievements
+                - list [ref=e424]:
+                  - listitem [ref=e425]: Real-time order tracking
+                  - listitem [ref=e427]: Advanced analytics
+                  - listitem [ref=e429]: Scalable architecture
+          - generic [ref=e432]:
+            - button "Play video for Jogado App" [ref=e435] [cursor=pointer]:
+              - img [ref=e436]
+            - generic [ref=e439]:
+              - heading "Jogado App" [level=3] [ref=e441]
+              - paragraph [ref=e442]: Stadium seat booking application with interactive stadium selection and real-time seat availability. Seamless booking experience for sports events.
+              - generic [ref=e443]:
+                - paragraph [ref=e444]: Tech Stack
+                - generic [ref=e445]:
+                  - generic [ref=e446]: React Native
+                  - generic [ref=e447]: Firebase
+                  - generic [ref=e448]: Redux Saga
+                  - generic [ref=e449]: Real-time Updates
+              - generic [ref=e450]:
+                - paragraph [ref=e451]: Key Achievements
+                - list [ref=e452]:
+                  - listitem [ref=e453]: Interactive stadium selection
+                  - listitem [ref=e455]: Real-time seat availability
+                  - listitem [ref=e457]: Seamless booking flow
+      - generic [ref=e461]:
+        - heading "Key Achievements" [level=2] [ref=e463]
+        - generic [ref=e465]:
+          - generic [ref=e467]:
+            - img [ref=e469]
+            - generic [ref=e472]:
+              - heading "30% Performance Improvement" [level=3] [ref=e473]
+              - paragraph [ref=e474]: Optimized app performance through code splitting, lazy loading, and bundle optimization techniques.
+          - generic [ref=e476]:
+            - img [ref=e478]
+            - generic [ref=e480]:
+              - heading "40% Seek Performance Boost" [level=3] [ref=e481]
+              - paragraph [ref=e482]: Enhanced video seeking experience using Shaka Player optimization and advanced caching strategies.
+          - generic [ref=e484]:
+            - img [ref=e486]
+            - generic [ref=e491]:
+              - heading "1M+ Users Reached" [level=3] [ref=e492]
+              - paragraph [ref=e493]: Built and maintained applications serving millions of users across OTT and Fire TV platforms.
+          - generic [ref=e495]:
+            - img [ref=e497]
+            - generic [ref=e500]:
+              - heading "Amazon Collaboration" [level=3] [ref=e501]
+              - paragraph [ref=e502]: Worked directly with Amazon engineers to optimize streaming experiences for Fire TV ecosystem.
+      - generic [ref=e505]:
+        - generic [ref=e506]:
+          - heading "Latest Articles" [level=2] [ref=e507]
+          - paragraph [ref=e508]: Deep dives into Fire TV optimization, Kepler Apps integration, and modern streaming technologies.
+        - generic [ref=e510]:
+          - heading "Featured" [level=3] [ref=e511]
+          - generic [ref=e512]:
+            - article [ref=e514]:
+              - generic [ref=e515]:
+                - 'img "Fire TV Performance Optimization: Achieving 30% Faster Load Times" [ref=e517]'
+                - generic [ref=e519]:
+                  - generic [ref=e520]:
+                    - generic [ref=e521]:
+                      - generic [ref=e522]: Fire TV
+                      - generic [ref=e523]: Mar 15, 2026
+                    - 'heading "Fire TV Performance Optimization: Achieving 30% Faster Load Times" [level=3] [ref=e524]'
+                    - paragraph [ref=e525]: Deep dive into Fire TV optimization techniques using React Native, spatial navigation, and memory management strategies.
+                    - generic [ref=e527]:
+                      - img [ref=e528]
+                      - generic [ref=e531]: 8 min read
+                    - generic [ref=e532]:
+                      - generic [ref=e533]: "#Fire TV"
+                      - generic [ref=e534]: "#React Native"
+                      - generic [ref=e535]: "#Performance"
+                  - link "Read Article" [ref=e536] [cursor=pointer]:
+                    - /url: /blog/fire-tv-optimization-2026
+                    - button "Read Article" [ref=e537]:
+                      - text: Read Article
+                      - img [ref=e538]
+            - article [ref=e541]:
+              - generic [ref=e542]:
+                - 'img "Integrating Kepler Apps with Fire TV: A Complete Guide" [ref=e544]'
+                - generic [ref=e546]:
+                  - generic [ref=e547]:
+                    - generic [ref=e548]:
+                      - generic [ref=e549]: Kepler Apps
+                      - generic [ref=e550]: Mar 10, 2026
+                    - 'heading "Integrating Kepler Apps with Fire TV: A Complete Guide" [level=3] [ref=e551]'
+                    - paragraph [ref=e552]: Learn how to integrate Kepler apps framework with Fire TV for enhanced app distribution and monetization.
+                    - generic [ref=e554]:
+                      - img [ref=e555]
+                      - generic [ref=e558]: 10 min read
+                    - generic [ref=e559]:
+                      - generic [ref=e560]: "#Kepler Apps"
+                      - generic [ref=e561]: "#Fire TV"
+                      - generic [ref=e562]: "#Integration"
+                  - link "Read Article" [ref=e563] [cursor=pointer]:
+                    - /url: /blog/kepler-apps-integration
+                    - button "Read Article" [ref=e564]:
+                      - text: Read Article
+                      - img [ref=e565]
+        - generic [ref=e567]:
+          - generic [ref=e568]:
+            - img [ref=e569]
+            - heading "Filter by Category" [level=3] [ref=e571]
+          - generic [ref=e572]:
+            - button "All Articles" [ref=e573] [cursor=pointer]
+            - button "Fire TV" [ref=e574] [cursor=pointer]
+            - button "Kepler Apps" [ref=e575] [cursor=pointer]
+            - button "Video Streaming" [ref=e576] [cursor=pointer]
+            - button "React Native" [ref=e577] [cursor=pointer]
+            - button "Testing" [ref=e578] [cursor=pointer]
+        - generic [ref=e579]:
+          - heading "All Articles" [level=3] [ref=e580]
+          - generic [ref=e581]:
+            - article [ref=e583]:
+              - 'img "Fire TV Performance Optimization: Achieving 30% Faster Load Times" [ref=e585]'
+              - generic [ref=e587]:
+                - generic [ref=e588]:
+                  - generic [ref=e589]: Fire TV
+                  - generic [ref=e590]: Mar 15, 2026
+                - 'heading "Fire TV Performance Optimization: Achieving 30% Faster Load Times" [level=3] [ref=e591]'
+                - paragraph [ref=e592]: Deep dive into Fire TV optimization techniques using React Native, spatial navigation, and memory management strategies.
+                - generic [ref=e593]:
+                  - generic [ref=e594]:
+                    - img [ref=e595]
+                    - generic [ref=e598]: 8 min
+                  - generic [ref=e599]:
+                    - generic [ref=e600]: "#Fire TV"
+                    - generic [ref=e601]: "#React Native"
+                - link "Read More" [ref=e602] [cursor=pointer]:
+                  - /url: /blog/fire-tv-optimization-2026
+                  - button "Read More" [ref=e603]:
+                    - text: Read More
+                    - img [ref=e604]
+            - article [ref=e607]:
+              - 'img "Integrating Kepler Apps with Fire TV: A Complete Guide" [ref=e609]'
+              - generic [ref=e611]:
+                - generic [ref=e612]:
+                  - generic [ref=e613]: Kepler Apps
+                  - generic [ref=e614]: Mar 10, 2026
+                - 'heading "Integrating Kepler Apps with Fire TV: A Complete Guide" [level=3] [ref=e615]'
+                - paragraph [ref=e616]: Learn how to integrate Kepler apps framework with Fire TV for enhanced app distribution and monetization.
+                - generic [ref=e617]:
+                  - generic [ref=e618]:
+                    - img [ref=e619]
+                    - generic [ref=e622]: 10 min
+                  - generic [ref=e623]:
+                    - generic [ref=e624]: "#Kepler Apps"
+                    - generic [ref=e625]: "#Fire TV"
+                - link "Read More" [ref=e626] [cursor=pointer]:
+                  - /url: /blog/kepler-apps-integration
+                  - button "Read More" [ref=e627]:
+                    - text: Read More
+                    - img [ref=e628]
+            - article [ref=e631]:
+              - 'img "WebView Integration in Fire TV Apps: Challenges & Solutions" [ref=e633]'
+              - generic [ref=e635]:
+                - generic [ref=e636]:
+                  - generic [ref=e637]: Fire TV
+                  - generic [ref=e638]: Mar 5, 2026
+                - 'heading "WebView Integration in Fire TV Apps: Challenges & Solutions" [level=3] [ref=e639]'
+                - paragraph [ref=e640]: Master WebView integration for Fire TV apps with practical solutions to common challenges.
+                - generic [ref=e641]:
+                  - generic [ref=e642]:
+                    - img [ref=e643]
+                    - generic [ref=e646]: 7 min
+                  - generic [ref=e647]:
+                    - generic [ref=e648]: "#WebView"
+                    - generic [ref=e649]: "#Fire TV"
+                - link "Read More" [ref=e650] [cursor=pointer]:
+                  - /url: /blog/webview-integration-firetv
+                  - button "Read More" [ref=e651]:
+                    - text: Read More
+                    - img [ref=e652]
+            - article [ref=e655]:
+              - 'img "Shaka Player: Advanced Video Streaming for Fire TV" [ref=e657]'
+              - generic [ref=e659]:
+                - generic [ref=e660]:
+                  - generic [ref=e661]: Video Streaming
+                  - generic [ref=e662]: Feb 28, 2026
+                - 'heading "Shaka Player: Advanced Video Streaming for Fire TV" [level=3] [ref=e663]'
+                - paragraph [ref=e664]: Implement Shaka Player for robust HLS/DASH streaming on Fire TV with DRM support.
+                - generic [ref=e665]:
+                  - generic [ref=e666]:
+                    - img [ref=e667]
+                    - generic [ref=e670]: 9 min
+                  - generic [ref=e671]:
+                    - generic [ref=e672]: "#Shaka Player"
+                    - generic [ref=e673]: "#Video Streaming"
+                - link "Read More" [ref=e674] [cursor=pointer]:
+                  - /url: /blog/shaka-player-firetv
+                  - button "Read More" [ref=e675]:
+                    - text: Read More
+                    - img [ref=e676]
+            - article [ref=e679]:
+              - 'img "State Management in Fire TV Apps: Redux Toolkit Best Practices" [ref=e681]'
+              - generic [ref=e683]:
+                - generic [ref=e684]:
+                  - generic [ref=e685]: React Native
+                  - generic [ref=e686]: Feb 20, 2026
+                - 'heading "State Management in Fire TV Apps: Redux Toolkit Best Practices" [level=3] [ref=e687]'
+                - paragraph [ref=e688]: Optimize Redux Toolkit for Fire TV apps with practical patterns and performance tips.
+                - generic [ref=e689]:
+                  - generic [ref=e690]:
+                    - img [ref=e691]
+                    - generic [ref=e694]: 8 min
+                  - generic [ref=e695]:
+                    - generic [ref=e696]: "#Redux"
+                    - generic [ref=e697]: "#State Management"
+                - link "Read More" [ref=e698] [cursor=pointer]:
+                  - /url: /blog/redux-firetv-state
+                  - button "Read More" [ref=e699]:
+                    - text: Read More
+                    - img [ref=e700]
+            - article [ref=e703]:
+              - 'img "Testing Strategies for Fire TV Apps: Unit, Integration & E2E" [ref=e705]'
+              - generic [ref=e707]:
+                - generic [ref=e708]:
+                  - generic [ref=e709]: Testing
+                  - generic [ref=e710]: Feb 15, 2026
+                - 'heading "Testing Strategies for Fire TV Apps: Unit, Integration & E2E" [level=3] [ref=e711]'
+                - paragraph [ref=e712]: Comprehensive testing approach for Fire TV apps ensuring reliability and performance.
+                - generic [ref=e713]:
+                  - generic [ref=e714]:
+                    - img [ref=e715]
+                    - generic [ref=e718]: 10 min
+                  - generic [ref=e719]:
+                    - generic [ref=e720]: "#Testing"
+                    - generic [ref=e721]: "#Fire TV"
+                - link "Read More" [ref=e722] [cursor=pointer]:
+                  - /url: /blog/firetv-testing-strategies
+                  - button "Read More" [ref=e723]:
+                    - text: Read More
+                    - img [ref=e724]
+        - generic [ref=e726]:
+          - paragraph [ref=e727]: More articles coming soon. Subscribe to stay updated with the latest Fire TV and streaming technologies.
+          - link "Get Notified" [ref=e728] [cursor=pointer]:
+            - /url: "#contact"
+      - generic [ref=e731]:
+        - heading "Certifications & Credentials" [level=2] [ref=e733]
+        - generic [ref=e735]:
+          - generic [ref=e736]:
+            - generic [ref=e737]: 📱
+            - 'heading "React Native: The Practical Guide" [level=3] [ref=e738]'
+            - generic [ref=e739]:
+              - img [ref=e740]
+              - generic [ref=e743]: Udemy • Completed 2024
+            - paragraph [ref=e744]: Comprehensive React Native course covering mobile app development, state management, and performance optimization.
+            - generic [ref=e745]:
+              - paragraph [ref=e746]: "Skills Covered:"
+              - generic [ref=e747]:
+                - generic [ref=e748]: React Native
+                - generic [ref=e749]: Mobile Development
+                - generic [ref=e750]: JavaScript
+                - generic [ref=e751]: State Management
+            - link "View Credential" [ref=e752] [cursor=pointer]:
+              - /url: https://www.udemy.com/certificate/UC-70d1192f-bfec-4c94-b20b-dc535f6bfd92/
+              - text: View Credential
+              - img [ref=e753]
+            - paragraph [ref=e757]: "ID: UC-70d1192f-bfec-4c94-b20b-dc535f6bfd92"
+          - generic [ref=e758]:
+            - generic [ref=e759]: ⚡
+            - heading "JavaScript Fundamentals" [level=3] [ref=e760]
+            - generic [ref=e761]:
+              - img [ref=e762]
+              - generic [ref=e765]: Udemy • Completed 2023
+            - paragraph [ref=e766]: Core JavaScript concepts, ES6+, async programming, and best practices.
+            - generic [ref=e767]:
+              - paragraph [ref=e768]: "Skills Covered:"
+              - generic [ref=e769]:
+                - generic [ref=e770]: JavaScript
+                - generic [ref=e771]: ES6+
+                - generic [ref=e772]: Async Programming
+            - paragraph [ref=e773]: "ID: UC-xxxxx-xxxxx"
+          - generic [ref=e774]:
+            - generic [ref=e775]: ⚛️
+            - heading "React.js Advanced Patterns" [level=3] [ref=e776]
+            - generic [ref=e777]:
+              - img [ref=e778]
+              - generic [ref=e781]: Udemy • Completed 2023
+            - paragraph [ref=e782]: Advanced React patterns, hooks, performance optimization, and state management.
+            - generic [ref=e783]:
+              - paragraph [ref=e784]: "Skills Covered:"
+              - generic [ref=e785]:
+                - generic [ref=e786]: React.js
+                - generic [ref=e787]: Hooks
+                - generic [ref=e788]: Performance
+                - generic [ref=e789]: Redux
+            - paragraph [ref=e790]: "ID: UC-yyyyy-yyyyy"
+        - generic [ref=e791]:
+          - heading "Continuous Learning" [level=3] [ref=e792]
+          - paragraph [ref=e793]: I'm committed to continuous learning and staying updated with the latest technologies. I regularly take online courses, participate in tech communities, and explore new frameworks and tools.
+          - generic [ref=e794]:
+            - generic [ref=e795]:
+              - paragraph [ref=e796]: Current Focus
+              - list [ref=e797]:
+                - listitem [ref=e798]: • Advanced React Native Patterns
+                - listitem [ref=e799]: • Fire TV Optimization
+                - listitem [ref=e800]: • Performance Engineering
+            - generic [ref=e801]:
+              - paragraph [ref=e802]: Platforms
+              - list [ref=e803]:
+                - listitem [ref=e804]: • Udemy
+                - listitem [ref=e805]: • Coursera
+                - listitem [ref=e806]: • Official Documentation
+            - generic [ref=e807]:
+              - paragraph [ref=e808]: Community
+              - list [ref=e809]:
+                - listitem [ref=e810]: • Tech Meetups
+                - listitem [ref=e811]: • Open Source
+                - listitem [ref=e812]: • Developer Communities
+      - generic [ref=e815]:
+        - generic [ref=e816]:
+          - heading "Get In Touch" [level=2] [ref=e817]
+          - paragraph [ref=e819]: Have a project in mind or want to collaborate? I'd love to hear from you!
+        - generic [ref=e820]:
+          - generic [ref=e821]:
+            - generic [ref=e823]:
+              - img [ref=e825]
+              - generic [ref=e828]:
+                - paragraph [ref=e829]: Email
+                - link "sathishm1701@gmail.com" [ref=e830] [cursor=pointer]:
+                  - /url: mailto:sathishm1701@gmail.com
+            - generic [ref=e832]:
+              - img [ref=e834]
+              - generic [ref=e836]:
+                - paragraph [ref=e837]: Phone
+                - link "+91 9025439966" [ref=e838] [cursor=pointer]:
+                  - /url: tel:+919025439966
+            - generic [ref=e840]:
+              - img [ref=e842]
+              - generic [ref=e845]:
+                - paragraph [ref=e846]: Location
+                - paragraph [ref=e847]: Chennai
+          - generic [ref=e849]:
+            - generic [ref=e850]:
+              - generic [ref=e851]: Name
+              - textbox "Name" [ref=e852]:
+                - /placeholder: Your name
+            - generic [ref=e853]:
+              - generic [ref=e854]: Email
+              - textbox "Email" [ref=e855]:
+                - /placeholder: your@email.com
+            - generic [ref=e856]:
+              - generic [ref=e857]: Message
+              - textbox "Message" [ref=e858]:
+                - /placeholder: Your message...
+            - button "Send Message" [ref=e859] [cursor=pointer]
+  - contentinfo [ref=e860]:
+    - generic [ref=e861]:
+      - generic [ref=e862]:
+        - generic [ref=e863]:
+          - heading "SK" [level=3] [ref=e864]
+          - paragraph [ref=e865]: Building high-performance streaming experiences
+        - generic [ref=e866]:
+          - heading "Quick Links" [level=4] [ref=e867]
+          - list [ref=e868]:
+            - listitem [ref=e869]:
+              - link "About" [ref=e870] [cursor=pointer]:
+                - /url: "#about"
+            - listitem [ref=e871]:
+              - link "Projects" [ref=e872] [cursor=pointer]:
+                - /url: "#projects"
+            - listitem [ref=e873]:
+              - link "Contact" [ref=e874] [cursor=pointer]:
+                - /url: "#contact"
+        - generic [ref=e875]:
+          - heading "Resume" [level=4] [ref=e876]
+          - link "Download" [ref=e877] [cursor=pointer]:
+            - /url: /resume.pdf
+            - img [ref=e878]
+            - text: Download
+      - generic [ref=e881]:
+        - link "LinkedIn" [ref=e882] [cursor=pointer]:
+          - /url: https://www.linkedin.com/in/sathish-kumar-m-453464265/
+          - img [ref=e883]
+        - link "GitHub" [ref=e887] [cursor=pointer]:
+          - /url: https://github.com/sathishkumarm1701
+          - img [ref=e888]
+        - link "Email" [ref=e890] [cursor=pointer]:
+          - /url: mailto:sathishm1701@gmail.com
+          - img [ref=e891]
+      - paragraph [ref=e895]: © 2026 Sathish Kumar M. All rights reserved.
+```

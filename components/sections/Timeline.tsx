@@ -1,10 +1,15 @@
 'use client';
 
+import { memo, useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
-import { useState } from 'react';
+import { containerVariants, itemVariants } from '@/lib/animations';
 
-const Timeline = () => {
+const Timeline = memo(() => {
   const [activeIndex, setActiveIndex] = useState(0);
+  
+  const handleTimelineClick = useCallback((index: number) => {
+    setActiveIndex(index);
+  }, []);
 
   const experiences = [
     {
@@ -42,25 +47,6 @@ const Timeline = () => {
     },
   ];
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, x: -20 },
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: { duration: 0.6 },
-    },
-  };
-
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
       <div className="max-w-4xl mx-auto">
@@ -84,7 +70,7 @@ const Timeline = () => {
               <motion.div
                 key={index}
                 variants={itemVariants}
-                onClick={() => setActiveIndex(index)}
+                onClick={() => handleTimelineClick(index)}
                 className="cursor-pointer"
               >
                 <div className={`glass p-6 rounded-lg transition-all duration-300 ${
@@ -143,6 +129,8 @@ const Timeline = () => {
       </div>
     </section>
   );
-};
+});
+
+Timeline.displayName = 'Timeline';
 
 export default Timeline;

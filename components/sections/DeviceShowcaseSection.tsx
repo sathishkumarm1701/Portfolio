@@ -1,27 +1,11 @@
 'use client';
 
+import { memo } from 'react';
 import { motion } from 'framer-motion';
 import { FiTv, FiSmartphone } from 'react-icons/fi';
+import { containerVariants, itemVariants } from '@/lib/animations';
 
-const DeviceShowcaseSection = () => {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6 },
-    },
-  };
+const DeviceShowcaseSection = memo(() => {
 
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
@@ -113,6 +97,8 @@ const DeviceShowcaseSection = () => {
       </div>
     </section>
   );
-};
+});
+
+DeviceShowcaseSection.displayName = 'DeviceShowcaseSection';
 
 export default DeviceShowcaseSection;

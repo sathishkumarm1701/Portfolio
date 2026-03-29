@@ -1,0 +1,157 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - alert [ref=e2]
+  - navigation [ref=e3]:
+    - generic [ref=e5]:
+      - link "SK" [ref=e6] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e7]:
+        - link "About" [ref=e8] [cursor=pointer]:
+          - /url: "#about"
+        - link "Skills" [ref=e9] [cursor=pointer]:
+          - /url: "#skills"
+        - link "Experience" [ref=e10] [cursor=pointer]:
+          - /url: "#experience"
+        - link "Projects" [ref=e11] [cursor=pointer]:
+          - /url: "#projects"
+        - link "Blog" [ref=e12] [cursor=pointer]:
+          - /url: "#blog"
+        - link "Certifications" [ref=e13] [cursor=pointer]:
+          - /url: "#certifications"
+        - link "Contact" [ref=e14] [cursor=pointer]:
+          - /url: "#contact"
+        - button "Switch to light mode" [ref=e15] [cursor=pointer]:
+          - img [ref=e16]
+        - link "Get in Touch" [ref=e22] [cursor=pointer]:
+          - /url: "#contact"
+  - main [ref=e23]:
+    - generic [ref=e24]:
+      - link "Back to Articles" [ref=e26] [cursor=pointer]:
+        - /url: /#blog
+        - button "Back to Articles" [ref=e27]:
+          - img [ref=e28]
+          - text: Back to Articles
+      - generic [ref=e30]:
+        - generic [ref=e31]: Fire TV
+        - 'heading "Fire TV Performance Optimization: Achieving 30% Faster Load Times" [level=1] [ref=e32]'
+        - generic [ref=e33]:
+          - generic [ref=e34]:
+            - img [ref=e35]
+            - generic [ref=e37]: March 15, 2026
+          - generic [ref=e38]:
+            - img [ref=e39]
+            - generic [ref=e42]: 8 min read
+          - generic [ref=e43]: By Sathish Kumar M
+        - 'img "Fire TV Performance Optimization: Achieving 30% Faster Load Times" [ref=e45]'
+      - article [ref=e47]:
+        - generic [ref=e49]: "Fire TV apps demand a different approach to performance optimization compared to mobile apps. In this comprehensive guide, we'll explore the techniques that helped us achieve 30% performance improvements on SunNXT. ## Understanding Fire TV Architecture Fire TV devices have limited RAM (typically 1-2GB) and slower processors compared to modern smartphones. This means every optimization counts. ### Key Optimization Areas 1. **Memory Management** - Implement aggressive garbage collection - Use React.memo() for expensive components - Lazy load images and videos - Monitor heap size with React DevTools 2. **Spatial Navigation** - Optimize focus management for remote control - Reduce re-renders on focus changes - Use efficient event handlers 3. **Video Streaming** - Implement adaptive bitrate streaming - Use Shaka Player for HLS/DASH support - Cache manifest files locally - Implement seek optimization ## Real-World Results By implementing these techniques on SunNXT, we achieved: - 30% reduction in initial load time - 40% improvement in seek performance - Support for 500K+ concurrent Fire TV users - Seamless playback across different device generations ## Best Practices - Profile your app regularly with React DevTools - Test on actual Fire TV devices, not just emulators - Monitor memory usage during long playback sessions - Implement error recovery for network failures"
+      - generic [ref=e50]:
+        - generic [ref=e51]:
+          - img [ref=e52]
+          - heading "Tags" [level=3] [ref=e54]
+        - generic [ref=e55]:
+          - generic [ref=e56] [cursor=pointer]: "#Fire TV"
+          - generic [ref=e57] [cursor=pointer]: "#React Native"
+          - generic [ref=e58] [cursor=pointer]: "#Performance"
+          - generic [ref=e59] [cursor=pointer]: "#Optimization"
+      - generic [ref=e60]:
+        - heading "Related Articles" [level=2] [ref=e61]
+        - generic [ref=e62]:
+          - article [ref=e64]:
+            - 'img "Integrating Kepler Apps with Fire TV: A Complete Guide" [ref=e66]'
+            - generic [ref=e68]:
+              - generic [ref=e69]:
+                - generic [ref=e70]: Kepler Apps
+                - generic [ref=e71]: Mar 10, 2026
+              - 'heading "Integrating Kepler Apps with Fire TV: A Complete Guide" [level=3] [ref=e72]'
+              - paragraph [ref=e73]: Learn how to integrate Kepler apps framework with Fire TV for enhanced app distribution and monetization.
+              - generic [ref=e74]:
+                - generic [ref=e75]:
+                  - img [ref=e76]
+                  - generic [ref=e79]: 10 min
+                - generic [ref=e80]:
+                  - generic [ref=e81]: "#Kepler Apps"
+                  - generic [ref=e82]: "#Fire TV"
+              - link "Read More" [ref=e83] [cursor=pointer]:
+                - /url: /blog/kepler-apps-integration
+                - button "Read More" [ref=e84]:
+                  - text: Read More
+                  - img [ref=e85]
+          - article [ref=e88]:
+            - 'img "WebView Integration in Fire TV Apps: Challenges & Solutions" [ref=e90]'
+            - generic [ref=e92]:
+              - generic [ref=e93]:
+                - generic [ref=e94]: Fire TV
+                - generic [ref=e95]: Mar 5, 2026
+              - 'heading "WebView Integration in Fire TV Apps: Challenges & Solutions" [level=3] [ref=e96]'
+              - paragraph [ref=e97]: Master WebView integration for Fire TV apps with practical solutions to common challenges.
+              - generic [ref=e98]:
+                - generic [ref=e99]:
+                  - img [ref=e100]
+                  - generic [ref=e103]: 7 min
+                - generic [ref=e104]:
+                  - generic [ref=e105]: "#WebView"
+                  - generic [ref=e106]: "#Fire TV"
+              - link "Read More" [ref=e107] [cursor=pointer]:
+                - /url: /blog/webview-integration-firetv
+                - button "Read More" [ref=e108]:
+                  - text: Read More
+                  - img [ref=e109]
+          - article [ref=e112]:
+            - 'img "Shaka Player: Advanced Video Streaming for Fire TV" [ref=e114]'
+            - generic [ref=e116]:
+              - generic [ref=e117]:
+                - generic [ref=e118]: Video Streaming
+                - generic [ref=e119]: Feb 28, 2026
+              - 'heading "Shaka Player: Advanced Video Streaming for Fire TV" [level=3] [ref=e120]'
+              - paragraph [ref=e121]: Implement Shaka Player for robust HLS/DASH streaming on Fire TV with DRM support.
+              - generic [ref=e122]:
+                - generic [ref=e123]:
+                  - img [ref=e124]
+                  - generic [ref=e127]: 9 min
+                - generic [ref=e128]:
+                  - generic [ref=e129]: "#Shaka Player"
+                  - generic [ref=e130]: "#Video Streaming"
+              - link "Read More" [ref=e131] [cursor=pointer]:
+                - /url: /blog/shaka-player-firetv
+                - button "Read More" [ref=e132]:
+                  - text: Read More
+                  - img [ref=e133]
+  - contentinfo [ref=e135]:
+    - generic [ref=e136]:
+      - generic [ref=e137]:
+        - generic [ref=e138]:
+          - heading "SK" [level=3] [ref=e139]
+          - paragraph [ref=e140]: Building high-performance streaming experiences
+        - generic [ref=e141]:
+          - heading "Quick Links" [level=4] [ref=e142]
+          - list [ref=e143]:
+            - listitem [ref=e144]:
+              - link "About" [ref=e145] [cursor=pointer]:
+                - /url: "#about"
+            - listitem [ref=e146]:
+              - link "Projects" [ref=e147] [cursor=pointer]:
+                - /url: "#projects"
+            - listitem [ref=e148]:
+              - link "Contact" [ref=e149] [cursor=pointer]:
+                - /url: "#contact"
+        - generic [ref=e150]:
+          - heading "Resume" [level=4] [ref=e151]
+          - link "Download" [ref=e152] [cursor=pointer]:
+            - /url: /resume.pdf
+            - img [ref=e153]
+            - text: Download
+      - generic [ref=e156]:
+        - link "LinkedIn" [ref=e157] [cursor=pointer]:
+          - /url: https://www.linkedin.com/in/sathish-kumar-m-453464265/
+          - img [ref=e158]
+        - link "GitHub" [ref=e162] [cursor=pointer]:
+          - /url: https://github.com/sathishkumarm1701
+          - img [ref=e163]
+        - link "Email" [ref=e165] [cursor=pointer]:
+          - /url: mailto:sathishm1701@gmail.com
+          - img [ref=e166]
+      - paragraph [ref=e170]: © 2026 Sathish Kumar M. All rights reserved.
+```
