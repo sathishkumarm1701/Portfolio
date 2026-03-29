@@ -3,6 +3,7 @@ import Script from 'next/script';
 import './globals.css';
 import { ThemeProvider } from '@/context/ThemeContext';
 import { ClientLayout } from '@/components/ClientLayout';
+import PageLoader from '@/components/PageLoader';
 
 export const metadata: Metadata = {
   title: 'Sathish Kumar M — React Native & Fire TV Developer | OTT Specialist',
@@ -112,6 +113,42 @@ export default function RootLayout({
     },
   };
 
+  // Website structured data
+  const websiteSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Sathish Kumar M Portfolio',
+    url: 'https://sathishm.online',
+    description: 'Professional portfolio of Sathish Kumar M - React Native & Fire TV Developer',
+    author: {
+      '@type': 'Person',
+      name: 'Sathish Kumar M',
+    },
+    inLanguage: 'en-US',
+  };
+
+  // Professional Service structured data
+  const professionalServiceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ProfessionalService',
+    name: 'Sathish Kumar M - React Native Development Services',
+    description: 'Professional React Native and Fire TV development services specializing in OTT platforms, WebView integration, and streaming applications.',
+    url: 'https://sathishm.online',
+    telephone: '+91 9025439966',
+    email: 'sathishm1701@gmail.com',
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Chennai',
+      addressRegion: 'Tamil Nadu',
+      addressCountry: 'IN',
+    },
+    areaServed: {
+      '@type': 'Country',
+      name: 'India',
+    },
+    priceRange: '$$',
+  };
+
   return (
     <html lang="en" suppressHydrationWarning data-theme="dark">
       <head>
@@ -120,14 +157,40 @@ export default function RootLayout({
         <meta name="theme-color" content="#0a0e27" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        
+        {/* Preconnect to external domains */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        
+        {/* Canonical URL */}
         <link rel="canonical" href="https://sathishm.online" />
         
+        {/* Favicon and App Icons */}
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/manifest.json" />
+        
+        {/* Structured Data - Person */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
+        
+        {/* Structured Data - Website */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        />
+        
+        {/* Structured Data - Professional Service */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(professionalServiceSchema) }}
+        />
+        
+        {/* Theme initialization */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -140,6 +203,7 @@ export default function RootLayout({
         />
       </head>
       <body className="relative overflow-x-hidden">
+        <PageLoader />
         <ThemeProvider>
           <ClientLayout>
             {children}

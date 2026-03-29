@@ -1,28 +1,48 @@
-'use client';
+import { Metadata } from 'next';
+import BlogPageClient from './BlogPageClient';
 
-import { motion } from 'framer-motion';
-import Link from 'next/link';
-import { FiArrowLeft } from 'react-icons/fi';
-import Blog from '@/components/sections/Blog';
+export const metadata: Metadata = {
+  title: 'Technical Blog | Sathish Kumar M - React Native & Fire TV Development',
+  description: 'In-depth articles about React Native, Fire TV development, WebView optimization, Shaka Player integration, Redux Toolkit patterns, and testing strategies. Learn from real-world OTT platform experience.',
+  keywords: [
+    'React Native Blog',
+    'Fire TV Development',
+    'WebView Optimization',
+    'Shaka Player',
+    'Redux Toolkit',
+    'React Native Testing',
+    'OTT Development',
+    'Streaming Technology',
+    'Mobile Development Blog',
+    'Fire TV Tutorial',
+  ],
+  openGraph: {
+    type: 'website',
+    title: 'Technical Blog | Sathish Kumar M',
+    description: 'In-depth articles about React Native, Fire TV, and OTT platform development.',
+    url: 'https://sathishm.online/blog',
+    siteName: 'Sathish Kumar M Portfolio',
+    images: [
+      {
+        url: '/og-image.svg',
+        width: 1200,
+        height: 630,
+        alt: 'Sathish Kumar M - Technical Blog',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Technical Blog | Sathish Kumar M',
+    description: 'In-depth articles about React Native, Fire TV, and OTT platform development.',
+    images: ['/og-image.svg'],
+    creator: '@sathishkumarm',
+  },
+  alternates: {
+    canonical: 'https://sathishm.online/blog',
+  },
+};
 
 export default function BlogPage() {
-  return (
-    <div className="min-h-screen pt-24">
-      {/* Back Button */}
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
-        <Link href="/">
-          <motion.button
-            className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 font-semibold"
-            whileHover={{ x: -5 }}
-          >
-            <FiArrowLeft size={20} />
-            Back to Home
-          </motion.button>
-        </Link>
-      </div>
-
-      {/* Blog Section */}
-      <Blog />
-    </div>
-  );
+  return <BlogPageClient />;
 }
