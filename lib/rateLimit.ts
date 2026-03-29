@@ -3,6 +3,7 @@ const CLEANUP_INTERVAL = 3600000; // 1 hour
 
 // Extend global type for cleanup tracking
 declare global {
+  // eslint-disable-next-line no-var
   var _rateLimitCleanupScheduled: boolean | undefined;
 }
 
@@ -22,8 +23,8 @@ function cleanupOldEntries() {
 }
 
 // Schedule cleanup (only once)
-if (typeof globalThis !== 'undefined' && !globalThis._rateLimitCleanupScheduled) {
-  globalThis._rateLimitCleanupScheduled = true;
+if (typeof globalThis !== 'undefined' && !(globalThis as typeof globalThis & { _rateLimitCleanupScheduled?: boolean })._rateLimitCleanupScheduled) {
+  (globalThis as typeof globalThis & { _rateLimitCleanupScheduled?: boolean })._rateLimitCleanupScheduled = true;
   setInterval(cleanupOldEntries, CLEANUP_INTERVAL);
 }
 
