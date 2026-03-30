@@ -96,16 +96,17 @@ const Blog = memo(() => {
           <motion.div variants={itemVariants}>
             <h3 className="text-2xl font-bold text-white mb-8">
               {selectedCategory ? `${selectedCategory} Articles` : 'All Articles'}
+              <span className="text-slate-400 text-base ml-2">({filteredBlogs.length})</span>
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredBlogs.map((blog) => (
-                <motion.div key={blog.id} variants={itemVariants}>
-                  <BlogCard blog={blog} />
-                </motion.div>
-              ))}
-            </div>
-
-            {filteredBlogs.length === 0 && (
+            {filteredBlogs.length > 0 ? (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {filteredBlogs.map((blog) => (
+                  <motion.div key={blog.id} variants={itemVariants}>
+                    <BlogCard blog={blog} />
+                  </motion.div>
+                ))}
+              </div>
+            ) : (
               <motion.div
                 className="text-center py-12"
                 initial={{ opacity: 0 }}
