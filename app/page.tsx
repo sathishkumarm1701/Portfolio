@@ -5,6 +5,7 @@ import Hero from '@/components/sections/Hero';
 import PremiumCTA from '@/components/sections/PremiumCTA';
 import Stats from '@/components/sections/Stats';
 import ParticleBackground from '@/components/ParticleBackground';
+import StickyCTA from '@/components/StickyCTA';
 
 // Lazy load below-the-fold sections
 const About = lazy(() => import('@/components/sections/About'));
@@ -28,6 +29,7 @@ export default function Home() {
   return (
     <>
       <ParticleBackground />
+      <StickyCTA />
       <div className="relative z-10">
         <Hero />
         <PremiumCTA />

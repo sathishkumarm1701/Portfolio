@@ -14,7 +14,7 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
-    id: 'fire-tv-optimization-2026',
+    id: 'fire-tv-development-guide',
     title: 'Fire TV Performance Optimization: Achieving 30% Faster Load Times',
     excerpt: 'Deep dive into Fire TV optimization techniques using React Native, spatial navigation, and memory management strategies.',
     content: `Fire TV apps demand a different approach to performance optimization compared to mobile apps. In this comprehensive guide, we'll explore the techniques that helped us achieve 30% performance improvements on SunNXT.
@@ -65,7 +65,7 @@ By implementing these techniques on SunNXT, we achieved:
     featured: true,
   },
   {
-    id: 'kepler-apps-integration',
+    id: 'kepler-apps-architecture',
     title: 'Integrating Kepler Apps with Fire TV: A Complete Guide',
     excerpt: 'Learn how to integrate Kepler apps framework with Fire TV for enhanced app distribution and monetization.',
     content: `Kepler Apps provides a powerful framework for Fire TV app development and distribution. This guide covers everything you need to know about integration.
@@ -137,7 +137,7 @@ Kepler Apps supports multiple monetization models:
     featured: true,
   },
   {
-    id: 'webview-integration-firetv',
+    id: 'webview-optimization',
     title: 'WebView Integration in Fire TV Apps: Challenges & Solutions',
     excerpt: 'Master WebView integration for Fire TV apps with practical solutions to common challenges.',
     content: `WebView integration is crucial for Fire TV apps that need to display web content. Here are the key challenges and solutions.
@@ -199,7 +199,7 @@ const webViewConfig = {
     image: '/og-image.svg',
   },
   {
-    id: 'shaka-player-firetv',
+    id: 'shaka-player-integration',
     title: 'Shaka Player: Advanced Video Streaming for Fire TV',
     excerpt: 'Implement Shaka Player for robust HLS/DASH streaming on Fire TV with DRM support.',
     content: `Shaka Player is a powerful open-source video player that works great on Fire TV. Learn how to implement it effectively.
@@ -278,7 +278,7 @@ Track playback events and quality metrics.
     image: '/og-image.svg',
   },
   {
-    id: 'redux-firetv-state',
+    id: 'redux-toolkit-patterns',
     title: 'State Management in Fire TV Apps: Redux Toolkit Best Practices',
     excerpt: 'Optimize Redux Toolkit for Fire TV apps with practical patterns and performance tips.',
     content: `Redux Toolkit simplifies state management, but Fire TV apps have unique requirements. Here's how to optimize it.
@@ -361,7 +361,7 @@ const playerSlice = createSlice({
     image: '/og-image.svg',
   },
   {
-    id: 'firetv-testing-strategies',
+    id: 'testing-react-native',
     title: 'Testing Strategies for Fire TV Apps: Unit, Integration & E2E',
     excerpt: 'Comprehensive testing approach for Fire TV apps ensuring reliability and performance.',
     content: `Testing Fire TV apps requires a multi-layered approach. Here's a complete testing strategy.
