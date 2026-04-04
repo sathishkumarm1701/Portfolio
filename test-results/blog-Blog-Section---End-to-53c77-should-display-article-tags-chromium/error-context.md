@@ -1,0 +1,77 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e7]: SK
+    - generic [ref=e8]:
+      - heading "Loading Portfolio" [level=2] [ref=e9]
+      - paragraph [ref=e10]: Preparing something awesome...
+    - generic [ref=e13]: 40%
+  - alert [ref=e14]
+  - navigation [ref=e15]:
+    - generic [ref=e17]:
+      - link "SK" [ref=e18] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e19]:
+        - link "About" [ref=e20] [cursor=pointer]:
+          - /url: "#about"
+        - link "Skills" [ref=e21] [cursor=pointer]:
+          - /url: "#skills"
+        - link "Experience" [ref=e22] [cursor=pointer]:
+          - /url: "#experience"
+        - link "Projects" [ref=e23] [cursor=pointer]:
+          - /url: "#projects"
+        - link "Blog" [ref=e24] [cursor=pointer]:
+          - /url: "#blog"
+        - link "Certifications" [ref=e25] [cursor=pointer]:
+          - /url: "#certifications"
+        - link "Contact" [ref=e26] [cursor=pointer]:
+          - /url: "#contact"
+        - link "Get in Touch" [ref=e27] [cursor=pointer]:
+          - /url: "#contact"
+  - main [ref=e28]:
+    - generic [ref=e30]:
+      - heading "Article Not Found" [level=1] [ref=e31]
+      - paragraph [ref=e32]: The article you're looking for doesn't exist.
+      - link "Back to Blog" [ref=e33] [cursor=pointer]:
+        - /url: /#blog
+        - button "Back to Blog" [ref=e34]:
+          - img [ref=e35]
+          - text: Back to Blog
+  - contentinfo [ref=e37]:
+    - generic [ref=e38]:
+      - generic [ref=e39]:
+        - generic [ref=e40]:
+          - heading "SK" [level=3] [ref=e41]
+          - paragraph [ref=e42]: Building high-performance streaming experiences
+        - generic [ref=e43]:
+          - heading "Quick Links" [level=4] [ref=e44]
+          - list [ref=e45]:
+            - listitem [ref=e46]:
+              - link "About" [ref=e47] [cursor=pointer]:
+                - /url: "#about"
+            - listitem [ref=e48]:
+              - link "Projects" [ref=e49] [cursor=pointer]:
+                - /url: "#projects"
+            - listitem [ref=e50]:
+              - link "Contact" [ref=e51] [cursor=pointer]:
+                - /url: "#contact"
+        - generic [ref=e52]:
+          - heading "Resume" [level=4] [ref=e53]
+          - link "Download" [ref=e54] [cursor=pointer]:
+            - /url: /resume.pdf
+            - img [ref=e55]
+            - text: Download
+      - generic [ref=e58]:
+        - link "LinkedIn" [ref=e59] [cursor=pointer]:
+          - /url: https://www.linkedin.com/in/sathish-kumar-m-453464265/
+          - img [ref=e60]
+        - link "GitHub" [ref=e64] [cursor=pointer]:
+          - /url: https://github.com/sathishkumarm1701
+          - img [ref=e65]
+        - link "Email" [ref=e67] [cursor=pointer]:
+          - /url: mailto:sathishm1701@gmail.com
+          - img [ref=e68]
+      - paragraph [ref=e72]: © 2026 Sathish Kumar M. All rights reserved.
+```

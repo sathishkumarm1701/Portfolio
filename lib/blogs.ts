@@ -61,7 +61,7 @@ By implementing these techniques on SunNXT, we achieved:
     readTime: 8,
     category: 'Fire TV',
     tags: ['Fire TV', 'React Native', 'Performance', 'Optimization'],
-    image: '/sunnxt-showcase.svg',
+    image: 'https://images.unsplash.com/photo-1593784991095-a205069470b6?w=1200&h=630&fit=crop',
     featured: true,
   },
   {
@@ -133,7 +133,7 @@ Kepler Apps supports multiple monetization models:
     readTime: 10,
     category: 'Kepler Apps',
     tags: ['Kepler Apps', 'Fire TV', 'Integration', 'SDK'],
-    image: '/og-image.svg',
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=630&fit=crop',
     featured: true,
   },
   {
@@ -196,7 +196,7 @@ const webViewConfig = {
     readTime: 7,
     category: 'Fire TV',
     tags: ['WebView', 'Fire TV', 'Security', 'Performance'],
-    image: '/og-image.svg',
+    image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&h=630&fit=crop',
   },
   {
     id: 'shaka-player-integration',
@@ -275,7 +275,7 @@ Track playback events and quality metrics.
     readTime: 9,
     category: 'Video Streaming',
     tags: ['Shaka Player', 'Video Streaming', 'Fire TV', 'DRM'],
-    image: '/og-image.svg',
+    image: 'https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=1200&h=630&fit=crop',
   },
   {
     id: 'redux-toolkit-patterns',
@@ -358,7 +358,7 @@ const playerSlice = createSlice({
     readTime: 8,
     category: 'React Native',
     tags: ['Redux', 'State Management', 'Fire TV', 'Performance'],
-    image: '/og-image.svg',
+    image: 'https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=1200&h=630&fit=crop',
   },
   {
     id: 'testing-react-native',
@@ -427,7 +427,7 @@ Test on multiple Fire TV device generations.
     readTime: 10,
     category: 'Testing',
     tags: ['Testing', 'Fire TV', 'Jest', 'E2E Testing'],
-    image: '/og-image.svg',
+    image: 'https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=1200&h=630&fit=crop',
   },
 ];
 

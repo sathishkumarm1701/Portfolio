@@ -1,0 +1,62 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e7]: SK
+    - generic [ref=e8]:
+      - heading "Loading Portfolio" [level=2] [ref=e9]
+      - paragraph [ref=e10]: Preparing something awesome...
+    - generic [ref=e13]: 50%
+  - alert [ref=e14]
+  - navigation [ref=e15]:
+    - generic [ref=e17]:
+      - link "SK" [ref=e18] [cursor=pointer]:
+        - /url: /
+      - button "Open navigation menu" [ref=e20] [cursor=pointer]:
+        - img [ref=e21]
+  - main [ref=e22]:
+    - generic [ref=e24]:
+      - heading "Article Not Found" [level=1] [ref=e25]
+      - paragraph [ref=e26]: The article you're looking for doesn't exist.
+      - link "Back to Blog" [ref=e27] [cursor=pointer]:
+        - /url: /#blog
+        - button "Back to Blog" [ref=e28]:
+          - img [ref=e29]
+          - text: Back to Blog
+  - contentinfo [ref=e31]:
+    - generic [ref=e32]:
+      - generic [ref=e33]:
+        - generic [ref=e34]:
+          - heading "SK" [level=3] [ref=e35]
+          - paragraph [ref=e36]: Building high-performance streaming experiences
+        - generic [ref=e37]:
+          - heading "Quick Links" [level=4] [ref=e38]
+          - list [ref=e39]:
+            - listitem [ref=e40]:
+              - link "About" [ref=e41] [cursor=pointer]:
+                - /url: "#about"
+            - listitem [ref=e42]:
+              - link "Projects" [ref=e43] [cursor=pointer]:
+                - /url: "#projects"
+            - listitem [ref=e44]:
+              - link "Contact" [ref=e45] [cursor=pointer]:
+                - /url: "#contact"
+        - generic [ref=e46]:
+          - heading "Resume" [level=4] [ref=e47]
+          - link "Download" [ref=e48] [cursor=pointer]:
+            - /url: /resume.pdf
+            - img [ref=e49]
+            - text: Download
+      - generic [ref=e52]:
+        - link "LinkedIn" [ref=e53] [cursor=pointer]:
+          - /url: https://www.linkedin.com/in/sathish-kumar-m-453464265/
+          - img [ref=e54]
+        - link "GitHub" [ref=e58] [cursor=pointer]:
+          - /url: https://github.com/sathishkumarm1701
+          - img [ref=e59]
+        - link "Email" [ref=e61] [cursor=pointer]:
+          - /url: mailto:sathishm1701@gmail.com
+          - img [ref=e62]
+      - paragraph [ref=e66]: © 2026 Sathish Kumar M. All rights reserved.
+```

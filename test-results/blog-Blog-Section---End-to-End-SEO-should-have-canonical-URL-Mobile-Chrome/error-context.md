@@ -2,168 +2,173 @@
 
 ```yaml
 - generic [active] [ref=e1]:
-  - alert [ref=e2]
-  - navigation [ref=e3]:
-    - generic [ref=e5]:
-      - link "SK" [ref=e6] [cursor=pointer]:
+  - generic [ref=e3]:
+    - generic [ref=e7]: SK
+    - generic [ref=e8]:
+      - heading "Loading Portfolio" [level=2] [ref=e9]
+      - paragraph [ref=e10]: Preparing something awesome...
+    - generic [ref=e13]: 90%
+  - alert [ref=e14]
+  - navigation [ref=e15]:
+    - generic [ref=e17]:
+      - link "SK" [ref=e18] [cursor=pointer]:
         - /url: /
-      - generic [ref=e7]:
-        - button "Switch to light mode" [ref=e8] [cursor=pointer]:
-          - img [ref=e9]
-        - button "Open navigation menu" [ref=e15] [cursor=pointer]:
-          - img [ref=e16]
-  - main [ref=e17]:
-    - generic [ref=e18]:
-      - link "Back to Home" [ref=e20] [cursor=pointer]:
+      - button "Open navigation menu" [ref=e20] [cursor=pointer]:
+        - img [ref=e21]
+  - main [ref=e22]:
+    - generic [ref=e23]:
+      - link "Back to Home" [ref=e25] [cursor=pointer]:
         - /url: /
-        - button "Back to Home" [ref=e21]:
-          - img [ref=e22]
+        - button "Back to Home" [ref=e26]:
+          - img [ref=e27]
           - text: Back to Home
-      - generic [ref=e26]:
-        - generic [ref=e27]:
-          - heading "Latest Articles" [level=2] [ref=e28]
-          - paragraph [ref=e29]: Deep dives into Fire TV optimization, Kepler Apps integration, and modern streaming technologies.
+      - generic [ref=e30]:
         - generic [ref=e31]:
-          - heading "Featured" [level=3] [ref=e32]
-          - generic [ref=e33]:
-            - article [ref=e35]:
-              - generic [ref=e36]:
-                - 'img "Fire TV Performance Optimization: Achieving 30% Faster Load Times" [ref=e38]'
-                - generic [ref=e40]:
-                  - generic [ref=e41]:
-                    - generic [ref=e42]:
-                      - generic [ref=e43]: Fire TV
-                      - generic [ref=e44]: Mar 15, 2026
-                    - 'heading "Fire TV Performance Optimization: Achieving 30% Faster Load Times" [level=3] [ref=e45]'
-                    - paragraph [ref=e46]: Deep dive into Fire TV optimization techniques using React Native, spatial navigation, and memory management strategies.
-                    - generic [ref=e48]:
-                      - img [ref=e49]
-                      - generic [ref=e52]: 8 min read
-                    - generic [ref=e53]:
-                      - generic [ref=e54]: "#Fire TV"
-                      - generic [ref=e55]: "#React Native"
-                      - generic [ref=e56]: "#Performance"
-                  - link "Read Article" [ref=e57] [cursor=pointer]:
-                    - /url: /blog/fire-tv-optimization-2026
-                    - button "Read Article" [ref=e58]:
+          - heading "Latest Articles" [level=2] [ref=e32]
+          - paragraph [ref=e33]: Deep dives into Fire TV optimization, Kepler Apps integration, and modern streaming technologies.
+        - generic [ref=e35]:
+          - heading "Featured" [level=3] [ref=e36]
+          - generic [ref=e37]:
+            - article [ref=e39]:
+              - generic [ref=e40]:
+                - 'img "Fire TV Performance Optimization: Achieving 30% Faster Load Times" [ref=e42]'
+                - generic [ref=e44]:
+                  - generic [ref=e45]:
+                    - generic [ref=e46]:
+                      - generic [ref=e47]: Fire TV
+                      - generic [ref=e48]: Mar 15, 2026
+                    - 'heading "Fire TV Performance Optimization: Achieving 30% Faster Load Times" [level=3] [ref=e49]'
+                    - paragraph [ref=e50]: Deep dive into Fire TV optimization techniques using React Native, spatial navigation, and memory management strategies.
+                    - generic [ref=e52]:
+                      - img [ref=e53]
+                      - generic [ref=e56]: 8 min read
+                    - generic [ref=e57]:
+                      - generic [ref=e58]: "#Fire TV"
+                      - generic [ref=e59]: "#React Native"
+                      - generic [ref=e60]: "#Performance"
+                  - link "Read Article" [ref=e61] [cursor=pointer]:
+                    - /url: /blog/fire-tv-development-guide
+                    - button "Read Article" [ref=e62]:
                       - text: Read Article
-                      - img [ref=e59]
-            - article [ref=e62]:
-              - generic [ref=e63]:
-                - 'img "Integrating Kepler Apps with Fire TV: A Complete Guide" [ref=e65]'
-                - generic [ref=e67]:
-                  - generic [ref=e68]:
-                    - generic [ref=e69]:
-                      - generic [ref=e70]: Kepler Apps
-                      - generic [ref=e71]: Mar 10, 2026
-                    - 'heading "Integrating Kepler Apps with Fire TV: A Complete Guide" [level=3] [ref=e72]'
-                    - paragraph [ref=e73]: Learn how to integrate Kepler apps framework with Fire TV for enhanced app distribution and monetization.
-                    - generic [ref=e75]:
-                      - img [ref=e76]
-                      - generic [ref=e79]: 10 min read
-                    - generic [ref=e80]:
-                      - generic [ref=e81]: "#Kepler Apps"
-                      - generic [ref=e82]: "#Fire TV"
-                      - generic [ref=e83]: "#Integration"
-                  - link "Read Article" [ref=e84] [cursor=pointer]:
-                    - /url: /blog/kepler-apps-integration
-                    - button "Read Article" [ref=e85]:
+                      - img [ref=e63]
+            - article [ref=e66]:
+              - generic [ref=e67]:
+                - 'img "Integrating Kepler Apps with Fire TV: A Complete Guide" [ref=e69]'
+                - generic [ref=e71]:
+                  - generic [ref=e72]:
+                    - generic [ref=e73]:
+                      - generic [ref=e74]: Kepler Apps
+                      - generic [ref=e75]: Mar 10, 2026
+                    - 'heading "Integrating Kepler Apps with Fire TV: A Complete Guide" [level=3] [ref=e76]'
+                    - paragraph [ref=e77]: Learn how to integrate Kepler apps framework with Fire TV for enhanced app distribution and monetization.
+                    - generic [ref=e79]:
+                      - img [ref=e80]
+                      - generic [ref=e83]: 10 min read
+                    - generic [ref=e84]:
+                      - generic [ref=e85]: "#Kepler Apps"
+                      - generic [ref=e86]: "#Fire TV"
+                      - generic [ref=e87]: "#Integration"
+                  - link "Read Article" [ref=e88] [cursor=pointer]:
+                    - /url: /blog/kepler-apps-architecture
+                    - button "Read Article" [ref=e89]:
                       - text: Read Article
-                      - img [ref=e86]
-        - generic [ref=e88]:
-          - generic [ref=e89]:
-            - img [ref=e90]
-            - heading "Filter by Category" [level=3] [ref=e92]
+                      - img [ref=e90]
+        - generic [ref=e92]:
           - generic [ref=e93]:
-            - button "All Articles" [ref=e94] [cursor=pointer]
-            - button "Fire TV" [ref=e95] [cursor=pointer]
-            - button "Kepler Apps" [ref=e96] [cursor=pointer]
-            - button "Video Streaming" [ref=e97] [cursor=pointer]
-            - button "React Native" [ref=e98] [cursor=pointer]
-            - button "Testing" [ref=e99] [cursor=pointer]
-        - generic [ref=e100]:
-          - heading "All Articles" [level=3] [ref=e101]
-          - generic [ref=e102]:
-            - article [ref=e104]:
-              - 'img "Fire TV Performance Optimization: Achieving 30% Faster Load Times" [ref=e106]'
-              - generic [ref=e108]:
-                - generic [ref=e109]:
-                  - generic [ref=e110]: Fire TV
-                  - generic [ref=e111]: Mar 15, 2026
-                - 'heading "Fire TV Performance Optimization: Achieving 30% Faster Load Times" [level=3] [ref=e112]'
-                - paragraph [ref=e113]: Deep dive into Fire TV optimization techniques using React Native, spatial navigation, and memory management strategies.
-                - generic [ref=e114]:
-                  - generic [ref=e115]:
-                    - img [ref=e116]
-                    - generic [ref=e119]: 8 min
-                  - generic [ref=e120]:
-                    - generic [ref=e121]: "#Fire TV"
-                    - generic [ref=e122]: "#React Native"
-                - link "Read More" [ref=e123] [cursor=pointer]:
-                  - /url: /blog/fire-tv-optimization-2026
-                  - button "Read More" [ref=e124]:
+            - img [ref=e94]
+            - heading "Filter by Category" [level=3] [ref=e96]
+          - generic [ref=e97]:
+            - button "All Articles" [ref=e98] [cursor=pointer]
+            - button "Fire TV" [ref=e99] [cursor=pointer]
+            - button "Kepler Apps" [ref=e100] [cursor=pointer]
+            - button "Video Streaming" [ref=e101] [cursor=pointer]
+            - button "React Native" [ref=e102] [cursor=pointer]
+            - button "Testing" [ref=e103] [cursor=pointer]
+        - generic [ref=e104]:
+          - heading "All Articles(6)" [level=3] [ref=e105]:
+            - text: All Articles
+            - generic [ref=e106]: (6)
+          - generic [ref=e107]:
+            - article [ref=e108]:
+              - 'img "Fire TV Performance Optimization: Achieving 30% Faster Load Times" [ref=e110]'
+              - generic [ref=e112]:
+                - generic [ref=e113]:
+                  - generic [ref=e114]: Fire TV
+                  - generic [ref=e115]: Mar 15, 2026
+                - 'heading "Fire TV Performance Optimization: Achieving 30% Faster Load Times" [level=3] [ref=e116]'
+                - paragraph [ref=e117]: Deep dive into Fire TV optimization techniques using React Native, spatial navigation, and memory management strategies.
+                - generic [ref=e118]:
+                  - generic [ref=e119]:
+                    - img [ref=e120]
+                    - generic [ref=e123]: 8 min
+                  - generic [ref=e124]:
+                    - generic [ref=e125]: "#Fire TV"
+                    - generic [ref=e126]: "#React Native"
+                - link "Read More" [ref=e127] [cursor=pointer]:
+                  - /url: /blog/fire-tv-development-guide
+                  - button "Read More" [ref=e128]:
                     - text: Read More
-                    - img [ref=e125]
-            - article [ref=e128]:
-              - 'img "Integrating Kepler Apps with Fire TV: A Complete Guide" [ref=e130]'
-              - generic [ref=e132]:
-                - generic [ref=e133]:
-                  - generic [ref=e134]: Kepler Apps
-                  - generic [ref=e135]: Mar 10, 2026
-                - 'heading "Integrating Kepler Apps with Fire TV: A Complete Guide" [level=3] [ref=e136]'
-                - paragraph [ref=e137]: Learn how to integrate Kepler apps framework with Fire TV for enhanced app distribution and monetization.
-                - generic [ref=e138]:
-                  - generic [ref=e139]:
-                    - img [ref=e140]
-                    - generic [ref=e143]: 10 min
-                  - generic [ref=e144]:
-                    - generic [ref=e145]: "#Kepler Apps"
-                    - generic [ref=e146]: "#Fire TV"
-                - link "Read More" [ref=e147] [cursor=pointer]:
-                  - /url: /blog/kepler-apps-integration
-                  - button "Read More" [ref=e148]:
+                    - img [ref=e129]
+            - article [ref=e131]:
+              - 'img "Integrating Kepler Apps with Fire TV: A Complete Guide" [ref=e133]'
+              - generic [ref=e135]:
+                - generic [ref=e136]:
+                  - generic [ref=e137]: Kepler Apps
+                  - generic [ref=e138]: Mar 10, 2026
+                - 'heading "Integrating Kepler Apps with Fire TV: A Complete Guide" [level=3] [ref=e139]'
+                - paragraph [ref=e140]: Learn how to integrate Kepler apps framework with Fire TV for enhanced app distribution and monetization.
+                - generic [ref=e141]:
+                  - generic [ref=e142]:
+                    - img [ref=e143]
+                    - generic [ref=e146]: 10 min
+                  - generic [ref=e147]:
+                    - generic [ref=e148]: "#Kepler Apps"
+                    - generic [ref=e149]: "#Fire TV"
+                - link "Read More" [ref=e150] [cursor=pointer]:
+                  - /url: /blog/kepler-apps-architecture
+                  - button "Read More" [ref=e151]:
                     - text: Read More
-                    - img [ref=e149]
-            - article [ref=e152]:
-              - 'img "WebView Integration in Fire TV Apps: Challenges & Solutions" [ref=e154]'
-              - generic [ref=e156]:
-                - generic [ref=e157]:
-                  - generic [ref=e158]: Fire TV
-                  - generic [ref=e159]: Mar 5, 2026
-                - 'heading "WebView Integration in Fire TV Apps: Challenges & Solutions" [level=3] [ref=e160]'
-                - paragraph [ref=e161]: Master WebView integration for Fire TV apps with practical solutions to common challenges.
-                - generic [ref=e162]:
-                  - generic [ref=e163]:
-                    - img [ref=e164]
-                    - generic [ref=e167]: 7 min
-                  - generic [ref=e168]:
-                    - generic [ref=e169]: "#WebView"
-                    - generic [ref=e170]: "#Fire TV"
-                - link "Read More" [ref=e171] [cursor=pointer]:
-                  - /url: /blog/webview-integration-firetv
-                  - button "Read More" [ref=e172]:
+                    - img [ref=e152]
+            - article [ref=e154]:
+              - 'img "WebView Integration in Fire TV Apps: Challenges & Solutions" [ref=e156]'
+              - generic [ref=e158]:
+                - generic [ref=e159]:
+                  - generic [ref=e160]: Fire TV
+                  - generic [ref=e161]: Mar 5, 2026
+                - 'heading "WebView Integration in Fire TV Apps: Challenges & Solutions" [level=3] [ref=e162]'
+                - paragraph [ref=e163]: Master WebView integration for Fire TV apps with practical solutions to common challenges.
+                - generic [ref=e164]:
+                  - generic [ref=e165]:
+                    - img [ref=e166]
+                    - generic [ref=e169]: 7 min
+                  - generic [ref=e170]:
+                    - generic [ref=e171]: "#WebView"
+                    - generic [ref=e172]: "#Fire TV"
+                - link "Read More" [ref=e173] [cursor=pointer]:
+                  - /url: /blog/webview-optimization
+                  - button "Read More" [ref=e174]:
                     - text: Read More
-                    - img [ref=e173]
-            - article [ref=e176]:
-              - 'img "Shaka Player: Advanced Video Streaming for Fire TV" [ref=e178]'
-              - generic [ref=e180]:
-                - generic [ref=e181]:
-                  - generic [ref=e182]: Video Streaming
-                  - generic [ref=e183]: Feb 28, 2026
-                - 'heading "Shaka Player: Advanced Video Streaming for Fire TV" [level=3] [ref=e184]'
-                - paragraph [ref=e185]: Implement Shaka Player for robust HLS/DASH streaming on Fire TV with DRM support.
-                - generic [ref=e186]:
-                  - generic [ref=e187]:
-                    - img [ref=e188]
-                    - generic [ref=e191]: 9 min
-                  - generic [ref=e192]:
-                    - generic [ref=e193]: "#Shaka Player"
-                    - generic [ref=e194]: "#Video Streaming"
-                - link "Read More" [ref=e195] [cursor=pointer]:
-                  - /url: /blog/shaka-player-firetv
-                  - button "Read More" [ref=e196]:
+                    - img [ref=e175]
+            - article [ref=e177]:
+              - 'img "Shaka Player: Advanced Video Streaming for Fire TV" [ref=e179]'
+              - generic [ref=e181]:
+                - generic [ref=e182]:
+                  - generic [ref=e183]: Video Streaming
+                  - generic [ref=e184]: Feb 28, 2026
+                - 'heading "Shaka Player: Advanced Video Streaming for Fire TV" [level=3] [ref=e185]'
+                - paragraph [ref=e186]: Implement Shaka Player for robust HLS/DASH streaming on Fire TV with DRM support.
+                - generic [ref=e187]:
+                  - generic [ref=e188]:
+                    - img [ref=e189]
+                    - generic [ref=e192]: 9 min
+                  - generic [ref=e193]:
+                    - generic [ref=e194]: "#Shaka Player"
+                    - generic [ref=e195]: "#Video Streaming"
+                - link "Read More" [ref=e196] [cursor=pointer]:
+                  - /url: /blog/shaka-player-integration
+                  - button "Read More" [ref=e197]:
                     - text: Read More
-                    - img [ref=e197]
+                    - img [ref=e198]
             - article [ref=e200]:
               - 'img "State Management in Fire TV Apps: Redux Toolkit Best Practices" [ref=e202]'
               - generic [ref=e204]:
@@ -180,67 +185,67 @@
                     - generic [ref=e217]: "#Redux"
                     - generic [ref=e218]: "#State Management"
                 - link "Read More" [ref=e219] [cursor=pointer]:
-                  - /url: /blog/redux-firetv-state
+                  - /url: /blog/redux-toolkit-patterns
                   - button "Read More" [ref=e220]:
                     - text: Read More
                     - img [ref=e221]
-            - article [ref=e224]:
-              - 'img "Testing Strategies for Fire TV Apps: Unit, Integration & E2E" [ref=e226]'
-              - generic [ref=e228]:
-                - generic [ref=e229]:
-                  - generic [ref=e230]: Testing
-                  - generic [ref=e231]: Feb 15, 2026
-                - 'heading "Testing Strategies for Fire TV Apps: Unit, Integration & E2E" [level=3] [ref=e232]'
-                - paragraph [ref=e233]: Comprehensive testing approach for Fire TV apps ensuring reliability and performance.
-                - generic [ref=e234]:
-                  - generic [ref=e235]:
-                    - img [ref=e236]
-                    - generic [ref=e239]: 10 min
-                  - generic [ref=e240]:
-                    - generic [ref=e241]: "#Testing"
-                    - generic [ref=e242]: "#Fire TV"
-                - link "Read More" [ref=e243] [cursor=pointer]:
-                  - /url: /blog/firetv-testing-strategies
-                  - button "Read More" [ref=e244]:
+            - article [ref=e223]:
+              - 'img "Testing Strategies for Fire TV Apps: Unit, Integration & E2E" [ref=e225]'
+              - generic [ref=e227]:
+                - generic [ref=e228]:
+                  - generic [ref=e229]: Testing
+                  - generic [ref=e230]: Feb 15, 2026
+                - 'heading "Testing Strategies for Fire TV Apps: Unit, Integration & E2E" [level=3] [ref=e231]'
+                - paragraph [ref=e232]: Comprehensive testing approach for Fire TV apps ensuring reliability and performance.
+                - generic [ref=e233]:
+                  - generic [ref=e234]:
+                    - img [ref=e235]
+                    - generic [ref=e238]: 10 min
+                  - generic [ref=e239]:
+                    - generic [ref=e240]: "#Testing"
+                    - generic [ref=e241]: "#Fire TV"
+                - link "Read More" [ref=e242] [cursor=pointer]:
+                  - /url: /blog/testing-react-native
+                  - button "Read More" [ref=e243]:
                     - text: Read More
-                    - img [ref=e245]
-        - generic [ref=e247]:
-          - paragraph [ref=e248]: More articles coming soon. Subscribe to stay updated with the latest Fire TV and streaming technologies.
-          - link "Get Notified" [ref=e249] [cursor=pointer]:
+                    - img [ref=e244]
+        - generic [ref=e246]:
+          - paragraph [ref=e247]: More articles coming soon. Subscribe to stay updated with the latest Fire TV and streaming technologies.
+          - link "Get Notified" [ref=e248] [cursor=pointer]:
             - /url: "#contact"
-  - contentinfo [ref=e250]:
-    - generic [ref=e251]:
-      - generic [ref=e252]:
-        - generic [ref=e253]:
-          - heading "SK" [level=3] [ref=e254]
-          - paragraph [ref=e255]: Building high-performance streaming experiences
-        - generic [ref=e256]:
-          - heading "Quick Links" [level=4] [ref=e257]
-          - list [ref=e258]:
-            - listitem [ref=e259]:
-              - link "About" [ref=e260] [cursor=pointer]:
+  - contentinfo [ref=e249]:
+    - generic [ref=e250]:
+      - generic [ref=e251]:
+        - generic [ref=e252]:
+          - heading "SK" [level=3] [ref=e253]
+          - paragraph [ref=e254]: Building high-performance streaming experiences
+        - generic [ref=e255]:
+          - heading "Quick Links" [level=4] [ref=e256]
+          - list [ref=e257]:
+            - listitem [ref=e258]:
+              - link "About" [ref=e259] [cursor=pointer]:
                 - /url: "#about"
-            - listitem [ref=e261]:
-              - link "Projects" [ref=e262] [cursor=pointer]:
+            - listitem [ref=e260]:
+              - link "Projects" [ref=e261] [cursor=pointer]:
                 - /url: "#projects"
-            - listitem [ref=e263]:
-              - link "Contact" [ref=e264] [cursor=pointer]:
+            - listitem [ref=e262]:
+              - link "Contact" [ref=e263] [cursor=pointer]:
                 - /url: "#contact"
-        - generic [ref=e265]:
-          - heading "Resume" [level=4] [ref=e266]
-          - link "Download" [ref=e267] [cursor=pointer]:
+        - generic [ref=e264]:
+          - heading "Resume" [level=4] [ref=e265]
+          - link "Download" [ref=e266] [cursor=pointer]:
             - /url: /resume.pdf
-            - img [ref=e268]
+            - img [ref=e267]
             - text: Download
-      - generic [ref=e271]:
-        - link "LinkedIn" [ref=e272] [cursor=pointer]:
+      - generic [ref=e270]:
+        - link "LinkedIn" [ref=e271] [cursor=pointer]:
           - /url: https://www.linkedin.com/in/sathish-kumar-m-453464265/
-          - img [ref=e273]
-        - link "GitHub" [ref=e277] [cursor=pointer]:
+          - img [ref=e272]
+        - link "GitHub" [ref=e276] [cursor=pointer]:
           - /url: https://github.com/sathishkumarm1701
-          - img [ref=e278]
-        - link "Email" [ref=e280] [cursor=pointer]:
+          - img [ref=e277]
+        - link "Email" [ref=e279] [cursor=pointer]:
           - /url: mailto:sathishm1701@gmail.com
-          - img [ref=e281]
-      - paragraph [ref=e285]: © 2026 Sathish Kumar M. All rights reserved.
+          - img [ref=e280]
+      - paragraph [ref=e284]: © 2026 Sathish Kumar M. All rights reserved.
 ```

@@ -3,15 +3,12 @@
 import { useState, useEffect, useCallback, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { FiMenu, FiX, FiSun, FiMoon } from 'react-icons/fi';
-import { useTheme } from '@/context/ThemeContext';
+import { FiMenu, FiX } from 'react-icons/fi';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [mounted, setMounted] = useState(false);
-  
-  const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
     setMounted(true);
@@ -54,11 +51,7 @@ const Navbar = () => {
   return (
     <motion.nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? theme === 'dark' 
-            ? 'glass' 
-            : 'glass'
-          : 'bg-transparent'
+        isScrolled ? 'glass' : 'bg-transparent'
       }`}
       style={{ overflow: 'hidden' }}
       initial={{ y: -100 }}
@@ -68,7 +61,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link href="/" className={`text-2xl font-bold ${theme === 'dark' ? 'gradient-text' : 'gradient-text'}`}>
+          <Link href="/" className="text-2xl font-bold gradient-text">
             SK
           </Link>
 
@@ -78,38 +71,15 @@ const Navbar = () => {
               <Link
                 key={item.label}
                 href={item.href}
-                className={`text-sm font-medium transition-colors ${
-                  theme === 'dark'
-                    ? 'text-slate-300 hover:text-blue-400'
-                    : 'text-slate-200 hover:text-blue-300'
-                }`}
+                className="text-sm font-medium text-slate-300 hover:text-blue-400 transition-colors"
               >
                 {item.label}
               </Link>
             ))}
-            
-            {/* Theme Toggle */}
-            <motion.button
-              onClick={toggleTheme}
-              aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
-              className={`p-2 rounded-lg transition-colors ${
-                theme === 'dark'
-                  ? 'bg-slate-800 text-yellow-400 hover:bg-slate-700'
-                  : 'bg-slate-700/50 text-yellow-300 hover:bg-slate-600/50'
-              }`}
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              {theme === 'dark' ? <FiSun size={20} /> : <FiMoon size={20} />}
-            </motion.button>
 
             <motion.a
               href="#contact"
-              className={`px-6 py-2 rounded-lg font-medium transition-colors ${
-                theme === 'dark'
-                  ? 'bg-blue-600 text-white hover:bg-blue-700'
-                  : 'bg-blue-600 text-white hover:bg-blue-700'
-              }`}
+              className="px-6 py-2 rounded-lg font-medium bg-blue-600 text-white hover:bg-blue-700 transition-colors"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -118,24 +88,10 @@ const Navbar = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden flex items-center gap-4">
-            <motion.button
-              onClick={toggleTheme}
-              aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
-              className={`p-2 rounded-lg transition-colors ${
-                theme === 'dark'
-                  ? 'bg-slate-800 text-yellow-400 hover:bg-slate-700'
-                  : 'bg-slate-700/50 text-yellow-300 hover:bg-slate-600/50'
-              }`}
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              {theme === 'dark' ? <FiSun size={20} /> : <FiMoon size={20} />}
-            </motion.button>
-
+          <div className="md:hidden">
             <button
               aria-label={isOpen ? 'Close navigation menu' : 'Open navigation menu'}
-              className={`${theme === 'dark' ? 'text-white' : 'text-slate-200'}`}
+              className="text-white"
               onClick={() => setIsOpen(!isOpen)}
             >
               {isOpen ? <FiX size={24} /> : <FiMenu size={24} />}
@@ -146,9 +102,7 @@ const Navbar = () => {
         {/* Mobile Menu */}
         {isOpen && (
           <motion.div
-            className={`md:hidden pb-4 space-y-2 ${
-              theme === 'dark' ? 'bg-dark-900' : 'bg-transparent'
-            }`}
+            className="md:hidden pb-4 space-y-2"
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
           >
@@ -156,11 +110,7 @@ const Navbar = () => {
               <Link
                 key={item.label}
                 href={item.href}
-                className={`block px-4 py-2 transition-colors ${
-                  theme === 'dark'
-                    ? 'text-slate-300 hover:text-blue-400'
-                    : 'text-slate-200 hover:text-blue-300'
-                }`}
+                className="block px-4 py-2 text-slate-300 hover:text-blue-400 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 {item.label}

@@ -1,0 +1,164 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e7]: SK
+    - generic [ref=e8]:
+      - heading "Loading Portfolio" [level=2] [ref=e9]
+      - paragraph [ref=e10]: Preparing something awesome...
+    - generic [ref=e13]: 50%
+  - alert [ref=e14]
+  - navigation [ref=e15]:
+    - generic [ref=e17]:
+      - link "SK" [ref=e18] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e19]:
+        - link "About" [ref=e20] [cursor=pointer]:
+          - /url: "#about"
+        - link "Skills" [ref=e21] [cursor=pointer]:
+          - /url: "#skills"
+        - link "Experience" [ref=e22] [cursor=pointer]:
+          - /url: "#experience"
+        - link "Projects" [ref=e23] [cursor=pointer]:
+          - /url: "#projects"
+        - link "Blog" [ref=e24] [cursor=pointer]:
+          - /url: "#blog"
+        - link "Certifications" [ref=e25] [cursor=pointer]:
+          - /url: "#certifications"
+        - link "Contact" [ref=e26] [cursor=pointer]:
+          - /url: "#contact"
+        - link "Get in Touch" [ref=e27] [cursor=pointer]:
+          - /url: "#contact"
+  - main [ref=e28]:
+    - generic [ref=e29]:
+      - button "Dismiss" [ref=e30] [cursor=pointer]:
+        - img [ref=e31]
+      - link "Hire Me" [ref=e34] [cursor=pointer]:
+        - /url: /#contact
+        - button "Hire Me" [ref=e35]:
+          - img [ref=e36]
+          - generic [ref=e39]: Hire Me
+      - generic [ref=e40]: Available
+    - generic [ref=e41]:
+      - generic [ref=e43]:
+        - generic "Premium React Native Developer Badge" [ref=e45]: ✨ Premium React Native Developer
+        - generic [ref=e46]:
+          - heading "Sathish Kumar M" [level=1] [ref=e47]:
+            - generic [ref=e49]: Sathish Kumar M
+          - paragraph [ref=e50]: React Native Developer | OTT & Fire TV Specialist
+        - paragraph [ref=e52]:
+          - text: Chennai-based React Native developer crafting high-performance streaming experiences that serve millions of users worldwide.
+          - generic [ref=e53]: "Proven track record: 30% performance improvements, 40% seek optimization, Amazon collaboration."
+        - generic [ref=e54]:
+          - generic [ref=e55]:
+            - img [ref=e56]
+            - generic [ref=e59]: 3+ Years
+            - generic [ref=e60]: Experience
+          - generic [ref=e61]:
+            - img [ref=e62]
+            - generic [ref=e64]: 30%
+            - generic [ref=e65]: Performance Boost
+          - generic [ref=e66]:
+            - img [ref=e67]
+            - generic [ref=e71]: 1M+
+            - generic [ref=e72]: Users Impacted
+        - generic [ref=e73]:
+          - link "View My Work" [ref=e74] [cursor=pointer]:
+            - /url: "#projects"
+            - generic [ref=e75]:
+              - text: View My Work
+              - img [ref=e76]
+          - link "Let's Connect" [ref=e79] [cursor=pointer]:
+            - /url: "#contact"
+        - generic [ref=e81]:
+          - generic [ref=e82]: Scroll to explore
+          - generic [ref=e83]: ↓
+      - generic [ref=e86]:
+        - generic [ref=e87]:
+          - heading "Ready to Work Together?" [level=2] [ref=e88]
+          - paragraph [ref=e89]: Let's discuss how I can help you build exceptional streaming experiences
+        - generic [ref=e90]:
+          - link "Download Resume PDF • 2 Pages Get Started →" [ref=e91] [cursor=pointer]:
+            - /url: /resume.pdf
+            - generic [ref=e93]:
+              - img [ref=e95]
+              - heading "Download Resume" [level=3] [ref=e99]
+              - paragraph [ref=e100]: PDF • 2 Pages
+              - generic [ref=e101]: Get Started →
+          - link "Email Me sathishm1701@gmail.com Get Started →" [ref=e102] [cursor=pointer]:
+            - /url: mailto:sathishm1701@gmail.com
+            - generic [ref=e104]:
+              - img [ref=e106]
+              - heading "Email Me" [level=3] [ref=e109]
+              - paragraph [ref=e110]: sathishm1701@gmail.com
+              - generic [ref=e111]: Get Started →
+          - link "LinkedIn Profile Connect with me Get Started →" [ref=e112] [cursor=pointer]:
+            - /url: https://www.linkedin.com/in/sathish-kumar-m-453464265/
+            - generic [ref=e114]:
+              - img [ref=e116]
+              - heading "LinkedIn Profile" [level=3] [ref=e120]
+              - paragraph [ref=e121]: Connect with me
+              - generic [ref=e122]: Get Started →
+      - generic [ref=e125]:
+        - generic [ref=e128]:
+          - generic [ref=e129]: 📅
+          - generic [ref=e130]: 0.5+
+          - paragraph [ref=e131]: Years Experience
+        - generic [ref=e134]:
+          - generic [ref=e135]: 🚀
+          - generic [ref=e136]: "0"
+          - paragraph [ref=e137]: Projects Delivered
+        - generic [ref=e140]:
+          - generic [ref=e141]: 👥
+          - generic [ref=e142]: 0.1M+
+          - paragraph [ref=e143]: Users Reached
+        - generic [ref=e146]:
+          - generic [ref=e147]: ⚡
+          - generic [ref=e148]: 7%
+          - paragraph [ref=e149]: Performance Boost
+      - generic [ref=e151]: Loading...
+      - generic [ref=e153]: Loading...
+      - generic [ref=e155]: Loading...
+      - generic [ref=e157]: Loading...
+      - generic [ref=e159]: Loading...
+      - generic [ref=e161]: Loading...
+      - generic [ref=e163]: Loading...
+      - generic [ref=e165]: Loading...
+      - generic [ref=e167]: Loading...
+  - contentinfo [ref=e168]:
+    - generic [ref=e169]:
+      - generic [ref=e170]:
+        - generic [ref=e171]:
+          - heading "SK" [level=3] [ref=e172]
+          - paragraph [ref=e173]: Building high-performance streaming experiences
+        - generic [ref=e174]:
+          - heading "Quick Links" [level=4] [ref=e175]
+          - list [ref=e176]:
+            - listitem [ref=e177]:
+              - link "About" [ref=e178] [cursor=pointer]:
+                - /url: "#about"
+            - listitem [ref=e179]:
+              - link "Projects" [ref=e180] [cursor=pointer]:
+                - /url: "#projects"
+            - listitem [ref=e181]:
+              - link "Contact" [ref=e182] [cursor=pointer]:
+                - /url: "#contact"
+        - generic [ref=e183]:
+          - heading "Resume" [level=4] [ref=e184]
+          - link "Download" [ref=e185] [cursor=pointer]:
+            - /url: /resume.pdf
+            - img [ref=e186]
+            - text: Download
+      - generic [ref=e190]:
+        - link "LinkedIn" [ref=e191] [cursor=pointer]:
+          - /url: https://www.linkedin.com/in/sathish-kumar-m-453464265/
+          - img [ref=e192]
+        - link "GitHub" [ref=e196] [cursor=pointer]:
+          - /url: https://github.com/sathishkumarm1701
+          - img [ref=e197]
+        - link "Email" [ref=e199] [cursor=pointer]:
+          - /url: mailto:sathishm1701@gmail.com
+          - img [ref=e200]
+      - paragraph [ref=e204]: © 2026 Sathish Kumar M. All rights reserved.
+```

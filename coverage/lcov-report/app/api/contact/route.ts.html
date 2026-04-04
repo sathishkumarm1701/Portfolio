@@ -25,28 +25,28 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/60</span>
+                <span class='fraction'>0/59</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/18</span>
+                <span class='fraction'>0/19</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/7</span>
+                <span class='fraction'>0/8</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/55</span>
+                <span class='fraction'>0/54</span>
             </div>
         
             
@@ -207,7 +207,13 @@
 <a name='L142'></a><a href='#L142'>142</a>
 <a name='L143'></a><a href='#L143'>143</a>
 <a name='L144'></a><a href='#L144'>144</a>
-<a name='L145'></a><a href='#L145'>145</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<a name='L145'></a><a href='#L145'>145</a>
+<a name='L146'></a><a href='#L146'>146</a>
+<a name='L147'></a><a href='#L147'>147</a>
+<a name='L148'></a><a href='#L148'>148</a>
+<a name='L149'></a><a href='#L149'>149</a>
+<a name='L150'></a><a href='#L150'>150</a>
+<a name='L151'></a><a href='#L151'>151</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -282,21 +288,27 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -357,7 +369,7 @@ import { rateLimit, getClientIP } from <span class="cstat-no" title="statement n
 // In-memory storage for development (replace with DB in production)
 const messages: any[] = <span class="cstat-no" title="statement not covered" >[];</span>
 &nbsp;
-export async function <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >POST(</span></span>request: NextRequest) {
+export async function <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >POST(r</span></span>equest: NextRequest) {
 <span class="cstat-no" title="statement not covered" >  try {</span>
     const ip = <span class="cstat-no" title="statement not covered" >getClientIP(request);</span>
 &nbsp;
@@ -370,10 +382,10 @@ export async function <span class="cstat-no" title="statement not covered" ><spa
     }
 &nbsp;
     const body = <span class="cstat-no" title="statement not covered" >await request.json();</span>
-    const { name, email, message } = <span class="cstat-no" title="statement not covered" >body;</span>
+    const { name, email, phone, subject, category, message } = <span class="cstat-no" title="statement not covered" >body;</span>
 &nbsp;
     // Validation
-<span class="cstat-no" title="statement not covered" >    <span class="missing-if-branch" title="if path not taken" >I</span>if (!name || !email || !message) {</span>
+<span class="cstat-no" title="statement not covered" >    <span class="missing-if-branch" title="if path not taken" >I</span>if (!name || !email || !subject || !category || !message) {</span>
 <span class="cstat-no" title="statement not covered" >      return NextResponse.json(</span>
         { error: 'Missing required fields' },
         { status: 400 }
@@ -422,27 +434,33 @@ export async function <span class="cstat-no" title="statement not covered" ><spa
       id: savedId || `msg_${Date.now()}`,
       name,
       email,
+      phone,
+      subject,
+      category,
       message,
       timestamp: new Date().toISOString(),
       ipAddress: ip,
     };
 <span class="cstat-no" title="statement not covered" >    messages.push(messageData);</span>
 &nbsp;
-    // Try to send emails if configured
-<span class="cstat-no" title="statement not covered" >    if (process.env.SMTP_USER &amp;&amp; process.env.SMTP_PASS) {</span>
-<span class="cstat-no" title="statement not covered" >      try {</span>
-        const { sendContactConfirmation, sendAdminNotification } = <span class="cstat-no" title="statement not covered" >await <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >import('</span>@/lib/email');</span></span>
-<span class="cstat-no" title="statement not covered" >        await sendContactConfirmation(email, name);</span>
-<span class="cstat-no" title="statement not covered" >        await sendAdminNotification(name, email, message);</span>
-<span class="cstat-no" title="statement not covered" >        console.log('Emails sent successfully');</span>
-      } catch (emailError) {
-<span class="cstat-no" title="statement not covered" >        console.warn('Email sending skipped - not configured yet. See GMAIL_SETUP.md to enable.');</span>
-        // Don't fail the request if email fails
-      }
-    } else {
-<span class="cstat-no" title="statement not covered" >      console.log('Email notifications disabled - configure SMTP to enable');</span>
+    // Send emails asynchronously in the background (don't wait for them)
+<span class="cstat-no" title="statement not covered" >    <span class="missing-if-branch" title="if path not taken" >I</span>if (process.env.SMTP_USER &amp;&amp; process.env.SMTP_PASS) {</span>
+      // Fire and forget - don't await these
+      (<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >async () =&gt; {</span></span>
+<span class="cstat-no" title="statement not covered" >        try {</span>
+          const { sendContactConfirmation, sendAdminNotification } = <span class="cstat-no" title="statement not covered" >await <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >import('</span>@/lib/email');</span></span>
+<span class="cstat-no" title="statement not covered" >          await Promise.all([</span>
+            sendContactConfirmation(email, name),
+            sendAdminNotification(name, email, subject, category, phone, message),
+          ]);
+<span class="cstat-no" title="statement not covered" >          console.log('Emails sent successfully');</span>
+        } catch (emailError) {
+<span class="cstat-no" title="statement not covered" >          console.warn('Email sending failed in background:', emailError);</span>
+        }
+      })();
     }
 &nbsp;
+    // Return immediately without waiting for emails
 <span class="cstat-no" title="statement not covered" >    return NextResponse.json(</span>
       {
         success: true,
@@ -460,7 +478,7 @@ export async function <span class="cstat-no" title="statement not covered" ><spa
   }
 }
 &nbsp;
-export async function <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >GET(</span></span>request: NextRequest) {
+export async function <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >GET(r</span></span>equest: NextRequest) {
 <span class="cstat-no" title="statement not covered" >  try {</span>
     // Add authentication here in production
     const authHeader = <span class="cstat-no" title="statement not covered" >request.headers.get('authorization');</span>
@@ -502,7 +520,7 @@ export async function <span class="cstat-no" title="statement not covered" ><spa
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-03-29T17:03:21.850Z
+                at 2026-04-03T16:49:04.021Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>

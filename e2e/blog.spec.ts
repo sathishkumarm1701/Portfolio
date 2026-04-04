@@ -141,14 +141,14 @@ test.describe('Blog Section - End to End', () => {
     })
 
     test('should display blog post content', async ({ page }) => {
-      await page.goto('/blog/fire-tv-optimization-2026')
+      await page.goto('/blog/fire-tv-development-guide')
       
       const title = page.locator('text=Fire TV Performance Optimization')
       await expect(title).toBeVisible()
     })
 
     test('should display article metadata', async ({ page }) => {
-      await page.goto('/blog/fire-tv-optimization-2026')
+      await page.goto('/blog/fire-tv-development-guide')
       
       // Check for date - use first() to avoid strict mode violation
       const date = page.locator('text=/Mar|Feb|Jan|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec/').first()
@@ -160,21 +160,21 @@ test.describe('Blog Section - End to End', () => {
     })
 
     test('should display back to articles button', async ({ page }) => {
-      await page.goto('/blog/fire-tv-optimization-2026')
+      await page.goto('/blog/fire-tv-development-guide')
       
       const backButton = page.locator('text=Back to Articles')
       await expect(backButton).toBeVisible()
     })
 
     test('should navigate back to blog listing', async ({ page }) => {
-      await page.goto('/blog/fire-tv-optimization-2026')
+      await page.goto('/blog/fire-tv-development-guide')
       
       await page.click('text=Back to Articles')
       await expect(page).toHaveURL('/blog')
     })
 
     test('should display article tags', async ({ page }) => {
-      await page.goto('/blog/fire-tv-optimization-2026')
+      await page.goto('/blog/fire-tv-development-guide')
       
       const tags = page.locator('text=/^#/')
       const count = await tags.count()
@@ -182,7 +182,7 @@ test.describe('Blog Section - End to End', () => {
     })
 
     test('should display related articles', async ({ page }) => {
-      await page.goto('/blog/fire-tv-optimization-2026')
+      await page.goto('/blog/fire-tv-development-guide')
       
       const relatedHeading = page.locator('text=Related Articles')
       await expect(relatedHeading).toBeVisible()
@@ -193,7 +193,7 @@ test.describe('Blog Section - End to End', () => {
     })
 
     test('should navigate to related article', async ({ page }) => {
-      await page.goto('/blog/fire-tv-optimization-2026')
+      await page.goto('/blog/fire-tv-development-guide')
       
       // Find and click a related article
       const relatedArticles = page.locator('article').filter({ has: page.locator('text=Related Articles').locator('..') })
@@ -359,7 +359,7 @@ test.describe('Blog Section - End to End', () => {
 
     test('should load blog post within acceptable time', async ({ page }) => {
       const startTime = Date.now()
-      await page.goto('/blog/fire-tv-optimization-2026')
+      await page.goto('/blog/fire-tv-development-guide')
       const loadTime = Date.now() - startTime
       
       // Should load within 3 seconds

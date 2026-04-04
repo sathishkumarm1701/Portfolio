@@ -13,6 +13,10 @@ const nextConfig = {
   },
   compress: true,
   productionBrowserSourceMaps: false,
+  
+  // Empty turbopack config to silence warning
+  turbopack: {},
+  
   headers: async () => {
     return [
       {

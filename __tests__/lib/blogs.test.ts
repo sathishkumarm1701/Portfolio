@@ -85,9 +85,9 @@ describe('Blog Utilities', () => {
 
   describe('getBlogById', () => {
     it('should return blog post by valid ID', () => {
-      const blog = getBlogById('fire-tv-optimization-2026')
+      const blog = getBlogById('fire-tv-development-guide')
       expect(blog).toBeDefined()
-      expect(blog?.id).toBe('fire-tv-optimization-2026')
+      expect(blog?.id).toBe('fire-tv-development-guide')
     })
 
     it('should return undefined for invalid ID', () => {
@@ -96,7 +96,7 @@ describe('Blog Utilities', () => {
     })
 
     it('should return blog with all required fields', () => {
-      const blog = getBlogById('fire-tv-optimization-2026')
+      const blog = getBlogById('fire-tv-development-guide')
       expect(blog).toHaveProperty('id')
       expect(blog).toHaveProperty('title')
       expect(blog).toHaveProperty('excerpt')
@@ -112,20 +112,20 @@ describe('Blog Utilities', () => {
 
   describe('getRelatedBlogs', () => {
     it('should return related blogs based on tags', () => {
-      const related = getRelatedBlogs('fire-tv-optimization-2026', 3)
+      const related = getRelatedBlogs('fire-tv-development-guide', 3)
       expect(Array.isArray(related)).toBe(true)
       expect(related.length).toBeLessThanOrEqual(3)
     })
 
     it('should not include the original blog in related blogs', () => {
-      const related = getRelatedBlogs('fire-tv-optimization-2026', 10)
+      const related = getRelatedBlogs('fire-tv-development-guide', 10)
       const ids = related.map(blog => blog.id)
-      expect(ids).not.toContain('fire-tv-optimization-2026')
+      expect(ids).not.toContain('fire-tv-development-guide')
     })
 
     it('should return blogs with shared tags', () => {
-      const original = getBlogById('fire-tv-optimization-2026')
-      const related = getRelatedBlogs('fire-tv-optimization-2026', 10)
+      const original = getBlogById('fire-tv-development-guide')
+      const related = getRelatedBlogs('fire-tv-development-guide', 10)
       
       related.forEach(blog => {
         const hasSharedTag = blog.tags.some(tag => original?.tags.includes(tag))
@@ -140,7 +140,7 @@ describe('Blog Utilities', () => {
 
     it('should respect limit parameter', () => {
       const limit = 2
-      const related = getRelatedBlogs('fire-tv-optimization-2026', limit)
+      const related = getRelatedBlogs('fire-tv-development-guide', limit)
       expect(related.length).toBeLessThanOrEqual(limit)
     })
   })
@@ -222,10 +222,11 @@ describe('Blog Utilities', () => {
       })
     })
 
-    it('should have valid image path for all blogs', () => {
+    it('should have valid image URL for all blogs', () => {
       const posts = getBlogPosts()
       posts.forEach(blog => {
-        expect(blog.image).toMatch(/^\//)
+        // Image should be either a local path starting with / or an external URL starting with http
+        expect(blog.image).toMatch(/^(\/|https?:\/\/)/)
       })
     })
   })
