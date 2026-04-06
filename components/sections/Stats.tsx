@@ -6,18 +6,27 @@ import { useEffect, useState } from 'react';
 import { containerVariants, itemVariants } from '@/lib/animations';
 
 const Stats = memo(() => {
-  const [counts, setCounts] = useState({
-    experience: 0,
-    projects: 0,
-    users: 0,
-    performance: 0,
-  });
+  // Start with target values as fallback for slow connections
+  const targets = { experience: 3, projects: 4, users: 1, performance: 40 };
+  
+  const [counts, setCounts] = useState(targets);
 
   useEffect(() => {
-    const targets = { experience: 3, projects: 4, users: 1, performance: 40 };
+    // Only animate if user prefers motion (accessibility)
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReducedMotion) return;
+
     const duration = 2000;
     const steps = 60;
     const stepDuration = duration / steps;
+
+    // Start from 0 for animation
+    setCounts({
+      experience: 0,
+      projects: 0,
+      users: 0,
+      performance: 0,
+    });
 
     let currentStep = 0;
     const interval = setInterval(() => {
@@ -38,7 +47,7 @@ const Stats = memo(() => {
     }, stepDuration);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [targets]);
 
   const stats = [
     {
