@@ -46,6 +46,19 @@ const Navbar = () => {
     []
   );
 
+  // Smooth scroll handler for hash links
+  const handleNavClick = useCallback((e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const targetId = href.replace('#', '');
+    const element = document.getElementById(targetId);
+    
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      // Update URL without triggering navigation
+      window.history.pushState(null, '', href);
+    }
+  }, []);
+
   if (!mounted) return null;
 
   return (
@@ -68,13 +81,14 @@ const Navbar = () => {
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
-              <Link
+              <a
                 key={item.label}
                 href={item.href}
+                onClick={(e) => handleNavClick(e, item.href)}
                 className="text-sm font-medium text-slate-300 hover:text-blue-400 transition-colors"
               >
                 {item.label}
-              </Link>
+              </a>
             ))}
 
             <motion.a
@@ -92,6 +106,7 @@ const Navbar = () => {
 
             <motion.a
               href="#contact"
+              onClick={(e) => handleNavClick(e, '#contact')}
               className="px-6 py-2 rounded-lg font-medium bg-blue-600 text-white hover:bg-blue-700 transition-colors"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -120,14 +135,17 @@ const Navbar = () => {
             animate={{ opacity: 1, y: 0 }}
           >
             {navItems.map((item) => (
-              <Link
+              <a
                 key={item.label}
                 href={item.href}
+                onClick={(e) => {
+                  handleNavClick(e, item.href);
+                  setIsOpen(false);
+                }}
                 className="block px-4 py-2 text-slate-300 hover:text-blue-400 transition-colors"
-                onClick={() => setIsOpen(false)}
               >
                 {item.label}
-              </Link>
+              </a>
             ))}
             <a
               href="https://github.com/sathishkumarm1701"
